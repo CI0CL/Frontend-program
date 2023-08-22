@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Match } from 'src/app/shared/match';
 
 @Component({
   selector: 'ov-match',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class MatchComponent {
   @Input()
-  match: MatchComponent;
+  match: Match;
   
   constructor(){}
 

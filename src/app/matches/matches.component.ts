@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatchComponent } from './match/match.component';
+import { Match } from '../shared/match';
 
 @Component({
   selector: 'ov-matches',
@@ -8,7 +9,7 @@ import { MatchComponent } from './match/match.component';
 })
 export class MatchesComponent {
     @Input()
-    matches: MatchComponent[];
+    matches: Match[];
 
     constructor(){}
 
