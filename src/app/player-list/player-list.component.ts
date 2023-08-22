@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Player } from '../shared/player';
 
 @Component({
   selector: 'ov-player-list',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./player-list.component.scss']
 })
 export class PlayerListComponent {
+     @Input()
+     playerList: Player[];
 
+   constructor() { }
+
+   ngOnInit(): void {
+   }
 }
