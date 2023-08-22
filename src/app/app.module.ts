@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PlayerListModule } from './player-list/player-list.module';
-import { TeamListModule } from './team-list/team-list.module';
-import { MatchesModule } from './matches/matches.module';
 import { HomeModule } from './home/home.module';
-import { PlayerListOverviewComponent } from './player-list-overview/player-list-overview.component';
 import { PlayerlistOverviewModule } from './player-list-overview/player-list-overview.module';
+import { MatchesOverviewModule } from './matches-overview/matches-overview.module';
+import { TeamListOverviewModule } from './team-list-overview/team-list-overview.module';
 
 
 @NgModule({
@@ -19,8 +16,8 @@ import { PlayerlistOverviewModule } from './player-list-overview/player-list-ove
     BrowserModule,
     BrowserAnimationsModule,
     PlayerlistOverviewModule,
-    TeamListModule,
-    MatchesModule,
+    TeamListOverviewModule,
+    MatchesOverviewModule,
     HomeModule
   ],
   providers: [],

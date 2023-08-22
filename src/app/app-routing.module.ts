@@ -8,6 +8,16 @@ const routes: Routes = [
     path: 'player-list',
     loadChildren: () =>
       import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
+  },
+  {
+    path: 'matches',
+    loadChildren: () =>
+      import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
+  },
+  {
+    path: 'team-list',
+    loadChildren: () =>
+    import ('./player-list-overview/player-list-overview.module').then(m=>m.PlayerlistOverviewModule)
   }
 ];
 
