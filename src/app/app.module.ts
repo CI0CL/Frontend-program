@@ -6,6 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlayerListModule } from './player-list/player-list.module';
 import { TeamListModule } from './team-list/team-list.module';
 import { MatchesModule } from './matches/matches.module';
+import { HomeModule } from './home/home.module';
+import { PlayerListOverviewComponent } from './player-list-overview/player-list-overview.component';
+import { PlayerlistOverviewModule } from './player-list-overview/player-list-overview.module';
 
 
 @NgModule({
@@ -15,9 +18,10 @@ import { MatchesModule } from './matches/matches.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    PlayerListModule,
+    PlayerlistOverviewModule,
     TeamListModule,
-    MatchesModule
+    MatchesModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

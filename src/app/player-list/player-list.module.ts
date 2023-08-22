@@ -10,6 +10,6 @@ import { PlayerComponent } from './player/player.component';
   imports: [
     CommonModule,
   ],
-  exports:[PlayerComponent, PlayerListComponent]
+  exports:[PlayerComponent]
 })
 export class PlayerListModule { }

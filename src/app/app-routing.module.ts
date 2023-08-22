@@ -1,18 +1,18 @@
-// import { NgModule } from '@angular/core';
-// import { RouterModule, Routes } from '@angular/router';
-// import { HomeComponent } from "./home/home.component";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from "./home/home.component";
 
-// const routes: Routes = [
-//   { path: '', component: HomeComponent },
-//   {
-//     path: 'products',
-//     loadChildren: () =>
-//       import('./team-overview/team-overview.module').then(m => m.ProductsOverviewModule)
-//   }
-// ];
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  {
+    path: 'player-list',
+    loadChildren: () =>
+      import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
+  }
+];
 
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes)],
-//   exports: [RouterModule]
-// })
-// export class AppRoutingModule { }
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
