@@ -1,17 +1,19 @@
-import { Component, Input } from '@angular/core';
-import { MatchComponent } from './match/match.component';
+import { Component, Input, OnInit } from '@angular/core';
 import { Match } from '../shared/match';
+import { HeaderTextService } from '../header-text.service';
 
 @Component({
   selector: 'ov-matches',
   templateUrl: './matches.component.html',
   styleUrls: ['./matches.component.scss']
 })
-export class MatchesComponent {
+export class MatchesComponent implements OnInit {
     @Input()
     matches: Match[];
 
-    constructor(){}
+    constructor(private headerService: HeaderTextService) { }
 
-    ngOnInit(): void{}
+    ngOnInit() {
+    this.headerService.setHeaderText('Matches Page');
+  }
 }

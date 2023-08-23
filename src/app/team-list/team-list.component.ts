@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Team } from '../shared/team';
+import { HeaderTextService } from '../header-text.service';
 
 @Component({
   selector: 'ov-team-list',
@@ -7,11 +8,12 @@ import { Team } from '../shared/team';
   styleUrls: ['./team-list.component.scss']
 })
 export class TeamListComponent implements OnInit {
-  @Input()
+     @Input()
      TeamList: Team[];
 
-   constructor() { }
+     constructor(private headerService: HeaderTextService) { }
 
-   ngOnInit(): void {
-   }
+     ngOnInit() {
+       this.headerService.setHeaderText('Teams Page');
+     }
   }

@@ -6,9 +6,7 @@ import { HomeModule } from './home/home.module';
 import { PlayerlistOverviewModule } from './player-list-overview/player-list-overview.module';
 import { MatchesOverviewModule } from './matches-overview/matches-overview.module';
 import { TeamListOverviewModule } from './team-list-overview/team-list-overview.module';
-import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-
 @NgModule({
   declarations: [
     AppComponent,

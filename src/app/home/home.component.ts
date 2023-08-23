@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderTextService } from '../header-text.service';
+
 
 @Component({
   selector: 'ov-home',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerService: HeaderTextService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.headerService.setHeaderText('Home Page');
   }
 
 }

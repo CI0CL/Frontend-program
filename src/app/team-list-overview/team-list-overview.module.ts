@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TeamListOverviewComponent } from './team-list-overview.component';
 import { TeamListModule } from '../team-list/team-list.module';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: TeamListOverviewComponent}
@@ -12,7 +12,9 @@ const routes: Routes = [
   declarations: [TeamListOverviewComponent],
   imports: [
     CommonModule,
-    TeamListModule
-  ]
+    TeamListModule,
+    RouterModule.forChild(routes)
+  ],
+  exports: [TeamListOverviewComponent]
 })
 export class TeamListOverviewModule { }

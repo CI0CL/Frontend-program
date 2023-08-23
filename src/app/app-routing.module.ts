@@ -11,14 +11,14 @@ const routes: Routes = [
       import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
   },
   {
-    path: 'matches',
-    loadChildren: () =>
-      import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
-  },
-  {
     path: 'team-list',
     loadChildren: () =>
     import ('./team-list-overview/team-list-overview.module').then(m=>m.TeamListOverviewModule)
+  },
+  {
+    path: 'matches',
+    loadChildren: () =>
+      import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
   },
   {path: '', redirectTo: '/Home-Component', pathMatch: 'full'}
 ];

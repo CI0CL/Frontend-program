@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HeaderTextService } from '../header-text.service';
+import { Match } from '../shared/match';
 
 @Component({
   selector: 'ov-matches-overview',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./matches-overview.component.scss']
 })
 export class MatchesOverviewComponent {
+  @Input()
+  matches: Match[];
 
+  constructor(private headerService: HeaderTextService) { }
+
+  ngOnInit() {
+    this.headerService.setHeaderText('Matches Page');
+  }
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatchesOverviewComponent } from './matches-overview.component';
 import { MatchesModule } from '../matches/matches.module';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: MatchesOverviewComponent}
@@ -12,7 +12,8 @@ const routes: Routes = [
   declarations: [MatchesOverviewComponent],
   imports: [
     CommonModule,
-    MatchesModule
+    MatchesModule,
+    RouterModule.forChild(routes)
   ],
   exports: [MatchesOverviewComponent]
 })
