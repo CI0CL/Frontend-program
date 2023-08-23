@@ -6,20 +6,21 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {
-    path: 'players',
+    path: 'api/players',
     loadChildren: () =>
       import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
   },
   {
-    path: 'teams',
+    path: 'api/teams',
     loadChildren: () =>
     import ('./team-list-overview/team-list-overview.module').then(m=>m.TeamListOverviewModule)
   },
   {
-    path: 'matches',
+    path: 'api/matches',
     loadChildren: () =>
       import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
   },
+  
   {path: '', redirectTo: '/Home-Component', pathMatch: 'full'}
 ];
 
