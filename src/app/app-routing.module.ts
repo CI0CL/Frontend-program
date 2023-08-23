@@ -4,14 +4,14 @@ import { HomeComponent } from "./home/home.component";
 
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   {
-    path: 'player-list',
+    path: 'players',
     loadChildren: () =>
       import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
   },
   {
-    path: 'team-list',
+    path: 'teams',
     loadChildren: () =>
     import ('./team-list-overview/team-list-overview.module').then(m=>m.TeamListOverviewModule)
   },
