@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 
+
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'Home-Component', component: HomeComponent },
   {
     path: 'player-list',
     loadChildren: () =>
@@ -18,7 +19,8 @@ const routes: Routes = [
     path: 'team-list',
     loadChildren: () =>
     import ('./player-list-overview/player-list-overview.module').then(m=>m.PlayerlistOverviewModule)
-  }
+  },
+  {path: '', redirectTo: '/Home-Component', pathMatch: 'full'}
 ];
 
 @NgModule({
