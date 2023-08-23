@@ -1,24 +1,32 @@
-<nav>
-  <a routerLink="/"
+<nav class ="nav-container">
+  <li class = "nav-button">
+    <a routerLink="/"
      routerLinkActive="active"
      [routerLinkActiveOptions]="{exact:true}">
     Home
   </a>
+  </li>
+  <li class = "nav-button">
   <a routerLink="/player-list"
      routerLinkActive="active"
     [routerLinkActiveOptions]="{exact:true}" >
     Players
   </a>
+  </li>
+  <li class = "nav-button">
   <a routerLink="/team-list"
      routerLinkActive="active"
     [routerLinkActiveOptions]="{exact:true}" >
     Teams
   </a>
+  </li>
+  <li class = "nav-button">
   <a routerLink="/matches"
      routerLinkActive="active"
     [routerLinkActiveOptions]="{exact:true}" >
     Matches
   </a>
+  </li>
 </nav>
 
 <router-outlet></router-outlet>

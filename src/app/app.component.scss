@@ -1,4 +1,21 @@
-.active {
-  background-color: grey;
-  cursor: auto;
+
+.nav-container {
+  position: absolute;
+  top: 20px; /* Adjust this value to position vertically */
+  right: 40px; /* Adjust this value to position horizontally */
+  display: flex; /* Display buttons in a row */
+  gap: 40px; /* Adjust this value to control the space between buttons */
+}
+
+.nav-button {
+  padding: 10px 30px; /* Adjust padding as needed */
+  background-color: #ababac; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-button:hover {
+  background-color: #686868; /* Change color on hover */
 }
