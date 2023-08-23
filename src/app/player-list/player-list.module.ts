@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlayerListComponent } from './player-list.component';
 import { PlayerComponent } from './player/player.component';
+import { SharedModule } from "../shared/shared.module";
 import { FormsModule } from '@angular/forms';
-
-
+import { SearchComponent } from './shared/search/search.component';
+import { PlayerFilterPipe } from './shared/search/player-list-filter.pipe';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [PlayerListComponent, PlayerComponent],
+  declarations: [PlayerListComponent, PlayerComponent, SearchComponent,PlayerFilterPipe],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatIconModule
 
   ],
-  exports:[PlayerListComponent, PlayerComponent]
+  exports:[PlayerListComponent, PlayerComponent,SearchComponent,PlayerFilterPipe]
 })
 export class PlayerListModule { }

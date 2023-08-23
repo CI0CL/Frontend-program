@@ -7,6 +7,7 @@ import { Player } from '../../shared/player'
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
+  
   @Input() player: Player;
 
   constructor(){}

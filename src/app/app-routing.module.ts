@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'team-list',
     loadChildren: () =>
-    import ('./player-list-overview/player-list-overview.module').then(m=>m.PlayerlistOverviewModule)
+    import ('./team-list-overview/team-list-overview.module').then(m=>m.TeamListOverviewModule)
   },
   {path: '', redirectTo: '/Home-Component', pathMatch: 'full'}
 ];
