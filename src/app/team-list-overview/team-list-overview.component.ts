@@ -10,6 +10,11 @@ import { Team } from '../shared/team';
 export class TeamListOverviewComponent {
   @Input()
   TeamList: Team[];
+  
+  query: string;
+  onSearch(query: string): void {
+    this.query = query;
+  }
 
   constructor(private headerService: HeaderTextService) { }
 

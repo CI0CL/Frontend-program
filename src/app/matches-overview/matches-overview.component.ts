@@ -1,26 +1,7 @@
-/*import { Component, Input } from '@angular/core';
-import { HeaderTextService } from '../header-text.service';
-import { Match } from '../shared/match';
-
-@Component({
-  selector: 'ov-matches-overview',
-  templateUrl: './matches-overview.component.html',
-  styleUrls: ['./matches-overview.component.scss']
-})
-export class MatchesOverviewComponent {
-  @Input()
-  matches: Match[];
-
-  constructor(private headerService: HeaderTextService) { }
-
-  ngOnInit() {
-    this.headerService.setHeaderText('Matches Page');
-  }
-}
-*/
 import { Component, OnInit } from '@angular/core';
 import { Match } from '../shared/match';
 import { MatchService } from '../matches/match/match.service';
+import { HeaderTextService } from '../header-text.service';
 
 @Component({
   selector: 'ov-matches-overview',
@@ -30,11 +11,8 @@ import { MatchService } from '../matches/match/match.service';
 export class MatchesOverviewComponent implements OnInit {
   matches: Match[] = [];
 
-  constructor(private matchService: MatchService) { }
+  constructor(private headerService: HeaderTextService, private matchService: MatchService) { }
 
-  ngOnInit(): void {
-    this.loadMatches();
-  }
 
   loadMatches(): void {
     this.matchService.getMatches().subscribe(
@@ -42,4 +20,14 @@ export class MatchesOverviewComponent implements OnInit {
       error => console.error(error)
     );
   }
+  ngOnInit() {
+    this.headerService.setHeaderText('Matches Page');
+    this.loadMatches();
+  }
+  
+  query: string;
+  onSearch(query: string): void {
+    this.query = query;
+  }
+
 }

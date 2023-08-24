@@ -6,4 +6,6 @@
       </li>
     </ul>
   </div>
+  <ov-search (search)="onSearch($event)"></ov-search>
+<ov-matches [matches]=" matches | MatchFilter: query "></ov-matches>
 
