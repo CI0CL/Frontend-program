@@ -7,6 +7,8 @@ import { PlayerlistOverviewModule } from './player-list-overview/player-list-ove
 import { MatchesOverviewModule } from './matches-overview/matches-overview.module';
 import { TeamListOverviewModule } from './team-list-overview/team-list-overview.module';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     TeamListOverviewModule,
     MatchesOverviewModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
