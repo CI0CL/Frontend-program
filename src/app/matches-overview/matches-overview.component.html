@@ -1,7 +1,12 @@
-
-<div class="matches-overview">
-    <h1>Matches Overview</h1>
-  </div>
-  <ov-matches class = "matches"></ov-matches>
-  <ov-search class = "search" (search)="onSearch($event)"></ov-search>
-<ov-matches [matches]=" matches | MatchFilter: query "></ov-matches>
+<ov-matches class = "Match"></ov-matches>
+<ov-search class = "search" (search)="onSearch($event)"></ov-search>
+<ov-matches [matches]="matches | MatchFilter: query "></ov-matches>
+<nav class = "nav-container">
+  <li class = "nav-button">
+    <a routerLink="/matches/match"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}">
+    Team
+    </a>
+  </li>
+</nav> 

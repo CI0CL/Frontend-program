@@ -1,0 +1,38 @@
+.nav-container {
+    position: absolute;
+    top: 300px; /* Adjust this value to position vertically */
+    right: 40px; /* Adjust this value to position horizontally */
+    left: 10px;
+    display: flex; /* Display buttons in a row */
+    gap: 40px; /* Adjust this value to control the space between buttons */
+  }
+  
+  .nav-button {
+    list-style: none;
+    padding: 10px 30px; /* Adjust padding as needed */
+    background-color: #ababac; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .Team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Team-overview{
+    font-size: xx-large;
+    display:flex;
+    justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:700;
+    margin:30px;
+}
+.search{
+    position:absolute;
+    top: 131px;
+    left: 20px;
+}
+  

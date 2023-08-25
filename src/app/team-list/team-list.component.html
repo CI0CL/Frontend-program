@@ -1,2 +1,6 @@
-<ul class = 'team-list' >
-    </ul>
+<ul class="TeamList">
+    <li *ngFor="let team of TeamList">
+      <ov-team [team]="team"></ov-team>
+    </li>
+  </ul>
+  
