@@ -2,18 +2,11 @@
 <ov-search class = "search" (search)="onSearch($event)"></ov-search>
 <ov-player-list [playerList]=" playerlist| PlayerFilter: query "></ov-player-list>
 <nav class = "nav-container">
-<li class = "nav-button">
-    <a routerLink="/api/player"
+  <li class = "nav-button">
+    <a routerLink="/players/player"
      routerLinkActive="active"
      [routerLinkActiveOptions]="{exact:true}">
-    player
-  </a>
+    Player
+    </a>
   </li>
 </nav>
-<!-- OnClick:
-    <a routerLink="/api/player"
-     routerLinkActive="active"
-    [routerLinkActiveOptions]="{exact:true}" >
-    </a>
-
-    ## Unclear where to put this: select a player card to go to player-page-->
