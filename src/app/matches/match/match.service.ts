@@ -3,17 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Match } from 'src/app/shared/match';
 
-@Injectable({
-  providedIn: 'root'
+@Injectable ({
+  providedIn: 'any'
 })
 
 export class MatchService {
-  private baseUrl = 'http://localhost:8080';
+
+  private apiUrl = 'http://localhost:8081/api/matches';
 
   constructor(private http: HttpClient) { }
 
   getMatches(): Observable<Match[]> {
-    const url = `${this.baseUrl}/api/matches`;
-    return this.http.get<Match[]>(url);
+    return this.http.get<Match[]>(this.apiUrl);
   }
 }

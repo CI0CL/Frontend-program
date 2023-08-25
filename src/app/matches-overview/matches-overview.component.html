@@ -1,11 +1,7 @@
+
 <div class="matches-overview">
     <h1>Matches Overview</h1>
-    <ul>
-      <li *ngFor="let match of matches">
-        <ov-match [match]="match"></ov-match>
-      </li>
-    </ul>
   </div>
+  <ov-matches></ov-matches>
   <ov-search (search)="onSearch($event)"></ov-search>
 <ov-matches [matches]=" matches | MatchFilter: query "></ov-matches>
-

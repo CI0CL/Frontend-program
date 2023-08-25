@@ -16,7 +16,7 @@ const routes: Routes = [
     import ('./team-list-overview/team-list-overview.module').then(m=>m.TeamListOverviewModule)
   },
   {
-    path: 'api/matches',
+    path: 'matches',
     loadChildren: () =>
       import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
   },

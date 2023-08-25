@@ -9,20 +9,15 @@ import { HeaderTextService } from '../header-text.service';
   styleUrls: ['./matches-overview.component.scss']
 })
 export class MatchesOverviewComponent implements OnInit {
-  matches: Match[] = [];
+  matches: Match[]
 
-  constructor(private headerService: HeaderTextService, private matchService: MatchService) { }
+  constructor(private headerService: HeaderTextService) { }
 
-
-  loadMatches(): void {
-    this.matchService.getMatches().subscribe(
-      data => this.matches = data,
-      error => console.error(error)
-    );
-  }
   ngOnInit() {
     this.headerService.setHeaderText('Matches Page');
-    this.loadMatches();
+  }
+  loadMatches() {
+    throw new Error('Method not implemented.');
   }
   
   query: string;
