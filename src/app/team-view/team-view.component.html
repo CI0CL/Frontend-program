@@ -1,0 +1,45 @@
+<div class = "team-container">
+    <div class="grid-item">
+        <div class = "team-picture"><img src="../../assets/player-picture-placeholder.jpg" alt="Player picture">
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <section class = "text">
+        <p><strong>id:</strong> {{ team.id}}</p>
+        <p><strong>City:</strong> {{ team.city }}</p>
+        <p><strong>Country:</strong> {{ team.country }}</p>
+        <p><strong>Country:</strong> {{ team.teamName }}</p>
+        </section>
+    </div>
+    <div class="grid-item">
+        <section class = "text">
+            <p>Here we would put a short description, and fun facts</p>
+        </section>
+    </div>
+    <div class="grid-item"></div>
+    <div class="grid-item">        
+        <div class="button">
+            <a routerLink="/home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
+            Delete</a>
+        </div>
+    </div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <div class="button">
+            <a routerLink="/home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
+            Update</a>
+        </div>
+    </div>
+    <div class="grid-item">
+        <section>
+        <p>FORM</p>
+        </section></div>
+    <div class="grid-item"></div>
+</div>

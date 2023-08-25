@@ -1,19 +1,19 @@
 import { Component, Input, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { HeaderTextService } from '../header-text.service';
-import { Player } from '../shared/player';
+import { Match } from '../shared/match';
 
 @Component({
-  selector: 'ov-player-view',
-  templateUrl: 'player-view.component.html',
-  styleUrls: ['player-view.component.scss']
+  selector: 'ov-match-view',
+  templateUrl: 'match-view.component.html',
+  styleUrls: ['match-view.component.scss']
 })
-export class PlayerViewComponent implements OnDestroy {
-  @Input() player: Player;
+export class MatchViewComponent implements OnDestroy {
+  @Input() match: Match;
   private subscription: Subscription;
 
   constructor(private headerService: HeaderTextService) {
-    this.headerService.setHeaderText('Player page'); // Set header text in constructor
+    this.headerService.setHeaderText('Match page'); // Set header text in constructor
   }
 
   ngOnDestroy() {
