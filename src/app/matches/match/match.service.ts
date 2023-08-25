@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Match } from 'src/app/shared/match';
 
 @Injectable ({
-  providedIn: 'any'
+  providedIn: 'root'
 })
 
 export class MatchService {

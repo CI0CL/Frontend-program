@@ -2,6 +2,6 @@
 <div class="matches-overview">
     <h1>Matches Overview</h1>
   </div>
-  <ov-matches></ov-matches>
-  <ov-search (search)="onSearch($event)"></ov-search>
+  <ov-matches class = "matches"></ov-matches>
+  <ov-search class = "search" (search)="onSearch($event)"></ov-search>
 <ov-matches [matches]=" matches | MatchFilter: query "></ov-matches>
