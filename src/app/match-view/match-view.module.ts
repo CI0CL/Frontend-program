@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { PlayerViewComponent } from './player-view.component';
-
+import { MatchViewComponent } from './match-view.component';
 
 const routes: Routes = [
-  { path: '', component: PlayerViewComponent }
+  { path: '', component: MatchViewComponent }
 ];
 
 @NgModule({
-  declarations: [PlayerViewComponent],
+  declarations: [MatchViewComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  exports: [PlayerViewComponent]
+  exports: [MatchViewComponent]
 })
-export class PlayerViewModule { }
+export class MatchViewModule { }
