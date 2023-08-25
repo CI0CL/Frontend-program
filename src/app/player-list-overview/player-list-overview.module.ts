@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { RouterModule, Routes } from "@angular/router";
 import { PlayerListModule } from '../player-list/player-list.module';
 import { PlayerListOverviewComponent } from './player-list-overview.component';

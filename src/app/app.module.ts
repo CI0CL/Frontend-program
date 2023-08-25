@@ -8,10 +8,11 @@ import { MatchesOverviewModule } from './matches-overview/matches-overview.modul
 import { TeamListOverviewModule } from './team-list-overview/team-list-overview.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PlayerViewComponent } from './player-view/player-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
