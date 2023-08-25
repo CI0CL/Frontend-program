@@ -19,7 +19,7 @@ export class PlayerListComponent implements OnInit {
        this.loadEntities();
      }
      loadEntities() {
-      this.playerService.getMatches().subscribe(data => {
+      this.playerService.getplayers().subscribe(data => {
         this.playerList = data;
       });
     }

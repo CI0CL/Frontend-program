@@ -13,7 +13,7 @@ export class PlayerService {
 
   constructor(private http: HttpClient) { }
 
-  getMatches(): Observable<Player[]> {
+  getplayers(): Observable<Player[]> {
     return this.http.get<Player[]>(this.apiUrl);
   }
   getPlayer(): Observable<Player>{
