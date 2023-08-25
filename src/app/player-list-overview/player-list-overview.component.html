@@ -1,4 +1,5 @@
-<ov-search (search)="onSearch($event)"></ov-search>
+<ov-player-list class = "Player"></ov-player-list>
+<ov-search class = "search" (search)="onSearch($event)"></ov-search>
 <ov-player-list [playerList]=" playerlist| PlayerFilter: query "></ov-player-list>
 <nav class = "nav-container">
 <li class = "nav-button">
