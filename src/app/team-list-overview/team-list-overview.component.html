@@ -1,2 +1,12 @@
-<ov-search (search)="onSearch($event)"></ov-search>
+<ov-team-list class = "Team"></ov-team-list>
+<ov-search class = "search" (search)="onSearch($event)"></ov-search>
 <ov-team-list [TeamList]=" TeamList | TeamFilter: query "></ov-team-list>
+<nav class = "nav-container">
+  <li class = "nav-button">
+    <a routerLink="/teams/team"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}">
+    Team
+    </a>
+  </li>
+</nav>
