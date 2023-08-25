@@ -8,6 +8,11 @@ import { SearchComponent } from './shared/search/search.component';
 import { PlayerFilterPipe } from './shared/search/player-list-filter.pipe';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: PlayerListComponent}
+];
 
 @NgModule({
   declarations: [PlayerListComponent, PlayerComponent, SearchComponent,PlayerFilterPipe],
@@ -15,7 +20,9 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
     CommonModule,
     FormsModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule.forChild(routes)
+    
 
   ],
   exports:[PlayerListComponent, PlayerComponent,SearchComponent,PlayerFilterPipe]
