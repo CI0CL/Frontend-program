@@ -9,6 +9,7 @@ import { TeamListOverviewModule } from './team-list-overview/team-list-overview.
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayerViewComponent } from './player-view/player-view.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PlayerViewComponent } from './player-view/player-view.component';
     MatchesOverviewModule,
     AppRoutingModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
