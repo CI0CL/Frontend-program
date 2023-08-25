@@ -1,0 +1,36 @@
+
+.player-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: fit-content(50px) repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);    /* Three rows */
+    margin: 0 auto; /* Center the grid */
+}
+
+.player-picture{
+    padding: 5px;
+    size: fit-content;
+}
+
+.grid-item {
+    padding: 15px;
+    gap: 20px;
+    display: flex; /* Add this line to enable vertical centering */
+    justify-content: left;
+    align-items:flex-end;
+}
+
+.button {
+    list-style: none;
+    padding: 10px 30px; /* Adjust padding as needed */
+    background-color: #5e5e85; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    }
+
+.button:hover {
+    background-color: #09da7c; /* Change color on hover */
+} 

@@ -20,6 +20,11 @@ const routes: Routes = [
     loadChildren: () =>
       import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
   },
+  {
+    path: 'api/player',
+    loadChildren: () =>
+     import('./player-view/player-view.module').then(m => m.PlayerViewModule)
+  },
   
   {path: '', redirectTo: '/Home-Component', pathMatch: 'full'}
 ];
@@ -29,3 +34,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
