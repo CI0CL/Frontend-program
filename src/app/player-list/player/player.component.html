@@ -3,4 +3,13 @@
     <p>Age: {{player.age}}</p>
     <p>Position: {{player.position}}</p>
     <p>Number: {{player.number}}</p>
+<nav>
+    <li class = "nav-button">
+        <a routerLink="/api/player"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}">
+        player
+      </a>
+     </li>
+</nav>
 </div>

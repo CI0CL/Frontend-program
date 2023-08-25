@@ -6,6 +6,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     text-align: center;
+    position:static;
 }
 
 .player p {
@@ -25,7 +26,17 @@
 
 /* Style the time and date */
 .player p:nth-child(3),
+
 .player p:last-child {
     font-style: italic;
     color: #888;
 }
+  .nav-button {
+    list-style: none;
+    padding: 10px 30px; /* Adjust padding as needed */
+    background-color: #ababac; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
