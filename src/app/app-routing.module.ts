@@ -6,12 +6,12 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {
-    path: 'api/players',
+    path: 'players',
     loadChildren: () =>
       import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
   },
   {
-    path: 'api/teams',
+    path: 'teams',
     loadChildren: () =>
     import ('./team-list-overview/team-list-overview.module').then(m=>m.TeamListOverviewModule)
   },
@@ -21,9 +21,19 @@ const routes: Routes = [
       import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
   },
   {
-    path: 'api/player',
+    path: 'players/player',
     loadChildren: () =>
      import('./player-view/player-view.module').then(m => m.PlayerViewModule)
+  },
+  {
+    path: 'teams/team',
+    loadChildren: () =>
+     import('./team-view/team-view.module').then(m => m.TeamViewModule)
+  },
+  {
+    path: 'matches/match',
+    loadChildren: () =>
+     import('./match-view/match-view.module').then(m => m.MatchViewModule)
   },
   
   {path: '', redirectTo: '/Home-Component', pathMatch: 'full'}
