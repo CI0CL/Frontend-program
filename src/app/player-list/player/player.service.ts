@@ -16,4 +16,7 @@ export class PlayerService {
   getMatches(): Observable<Player[]> {
     return this.http.get<Player[]>(this.apiUrl);
   }
+  getPlayer(): Observable<Player>{
+    return this.http.get<Player>(this.apiUrl)
+  }
 }
