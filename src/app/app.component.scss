@@ -56,9 +56,12 @@ nav, main {
   padding: 10px 30px; /* Adjust padding as needed */
   background-color: #ababac; /* Button background color */
   color: #fff; /* Button text color */
-  text-decoration: none;
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+.nav-button a {
+  text-decoration: none;
+  color:hwb(192 26% 54%)
 }
 
 .nav-button:hover {
