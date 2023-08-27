@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 const routes: Routes = [
@@ -40,7 +42,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+  MatInputModule, // for the in-browser error
+  MatFormFieldModule, // for the in-browser error
+  RouterModule.forRoot(routes),
+],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
