@@ -45,7 +45,7 @@ export class PlayerViewComponent {
     );  
   }
 
-  deleteTeam(player3: Player){
+  onDelete(){
     if (this.player) {
       this.playerService.deletePlayer(this.player.id).subscribe(() => {
         // Handle successful deletion, e.g., navigate back to a list
@@ -53,9 +53,7 @@ export class PlayerViewComponent {
     }
 
 
-  }
-
-  
+  }  
 
   ngOnDestroy() {
     // Unsubscribe to prevent memory leaks
