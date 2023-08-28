@@ -5,4 +5,14 @@
     <p>Score: {{ match.team1Score}} - {{ match.team2Score }}</p>
     <p>Time: {{match.time}}</p>
     <p>Date: {{match.date}}</p>
+    {{match.matchId}}
+    <nav class = "nav-container">
+      <li class = "nav-button">
+        <a [routerLink]="'/matches/' + match.matchId"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}">
+        Match
+        </a>
+      </li>
+    </nav> 
   </div>

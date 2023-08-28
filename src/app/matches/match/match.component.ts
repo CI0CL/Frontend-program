@@ -16,7 +16,8 @@ export class MatchComponent {
 
 }
 */
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Match } from 'src/app/shared/match';
 
 @Component({
@@ -24,10 +25,15 @@ import { Match } from 'src/app/shared/match';
   templateUrl: './match.component.html',
   styleUrls: ['./match.component.scss']
 })
-export class MatchComponent {
+export class MatchComponent implements OnInit{
   @Input() match: Match;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void { }
+
+  viewPlayer(matchId: number) {
+    // Navigate to the player view page with the player's ID as a parameter
+    this.router.navigate(['/match', matchId]);
+  }
 }

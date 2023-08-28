@@ -32,7 +32,7 @@ const routes: Routes = [
      import('./team-view/team-view.module').then(m => m.TeamViewModule)
   },
   {
-    path: 'matches/match',
+    path: 'matches/:id',
     loadChildren: () =>
      import('./match-view/match-view.module').then(m => m.MatchViewModule)
   },
