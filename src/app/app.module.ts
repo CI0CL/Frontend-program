@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayerViewComponent } from './player-view/player-view.component';
 import { PlayerViewModule } from './player-view/player-view.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { PlayerViewModule } from './player-view/player-view.module';
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-    PlayerViewModule
+
+    PlayerViewModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
