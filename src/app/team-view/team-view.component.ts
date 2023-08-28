@@ -45,6 +45,12 @@ export class TeamViewComponent {
     );
   }
 
+  onDelete() {
+    if (this.team) {
+      this.teamService.deleteTeam(this.team.id);
+    }
+  }
+
   ngOnDestroy() {
     // Unsubscribe to prevent memory leaks
     if (this.subscription) {

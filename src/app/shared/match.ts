@@ -1,7 +1,5 @@
-import { Team } from "./team";
-
 export interface Match{
-    matchId: number;
+    matchId(matchId: any): unknown;
     team1: string; // Team is shit
     team2: string; // Team is shit
     team1Score: number;

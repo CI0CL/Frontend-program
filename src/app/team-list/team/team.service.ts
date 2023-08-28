@@ -25,6 +25,10 @@ export class TeamService {
     return this.http.get<Team>(`${this.apiUrl}/${teamId}`);
   }
 
+  deleteTeam(teamId: number) {
+    return this.http.delete<Team>(`${this.apiUrl}/${teamId}`);
+  }
+
   updateTeam(team: Team): Observable<Team> {
 
     const useUrl: string = `${this.apiUrl}/${team.id}`;

@@ -14,12 +14,12 @@ import { ActivatedRoute, Route } from '@angular/router';
 })
 
 export class MatchViewComponent implements OnDestroy {
+
   @Input() match: Match;
 
   private subscription: Subscription;
 
   constructor(private headerService: HeaderTextService, private matchService : MatchService, private route: ActivatedRoute) {
-
     this.headerService.setHeaderText('Match page'); // Set header text in constructor
   }
   ngOnInit() {
@@ -46,6 +46,13 @@ export class MatchViewComponent implements OnDestroy {
       
     );
   }
+
+  onDelete() {
+    if (this.match) {
+      this.matchService.deleteMatch(this.match.matchId);
+    }
+  }
+
 
   ngOnDestroy(): void {
     if (this.subscription) {
