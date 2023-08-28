@@ -4,13 +4,17 @@
         <!--<div class="player-picture">{{player.image}}</div>-->
     </div>
 
-    <div class="grid-item">
-        <section class="text">
-            <!--<p><strong>id:</strong> {{ player.id}}</p>-->
-            <p><strong>Name:</strong> {{ player.name }}</p>
-            <p><strong>Age:</strong> {{ player.position }}</p>
-        </section>
-    </div>
+    <div *ngIf="player">
+        <h2>Player Details</h2>
+        <p><strong>Name:</strong> {{ player.name }}</p>
+        <p><strong>Age:</strong> {{ player.age }}</p>
+        <p><strong>id:</strong> {{ player.id }}</p>
+        <!-- Add more player details as needed -->
+      </div>
+      <div *ngIf="!player">
+        <p>Loading player details...</p>
+      </div>
+  
     <div class="grid-item">
         <section class="text">
             <p>Here we would put a short description, and fun facts</p>

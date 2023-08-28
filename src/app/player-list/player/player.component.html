@@ -3,13 +3,15 @@
     <p>Age: {{player.age}}</p>
     <p>Position: {{player.position}}</p>
     <p>Number: {{player.number}}</p>
-<nav>
-    <li class = "nav-button">
-        <a routerLink="/players/player"
-         routerLinkActive="active"
-         [routerLinkActiveOptions]="{exact:true}">
-        player
-      </a>
-     </li>
-</nav>
+    {{player.id}}
+    <nav>
+        <li class="nav-button">
+            <a [routerLink]="'/players/' + player.id"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact:true}">
+                Player
+            </a>
+        </li>
+    </nav>
+<!-- <button (click)="viewPlayer(player.id)">View Player</button> -->
 </div>

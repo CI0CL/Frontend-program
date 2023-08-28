@@ -4,14 +4,10 @@ import { HomeComponent } from "./home/home.component";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  {
-    path: 'players',
-    loadChildren: () =>
-      import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
-  },
+  // { path: 'players/:id', component: PlayerViewComponent }, // :id is the player ID
+  // { path: '', redirectTo: '/players', pathMatch: 'full' },
   {
     path: 'teams',
     loadChildren: () =>
@@ -23,12 +19,15 @@ const routes: Routes = [
       import ('./matches-overview/matches-overview.module').then(m => m.MatchesOverviewModule)
   },
   {
-    path: 'players/player',
+    path: 'players/:id',
     loadChildren: () =>
      import('./player-view/player-view.module').then(m => m.PlayerViewModule)
   },
+  {path: 'players',
+    loadChildren: () =>
+    import('./player-list-overview/player-list-overview.module').then(m=> m.PlayerlistOverviewModule)},
   {
-    path: 'teams/team',
+    path: 'teams/:id',
     loadChildren: () =>
      import('./team-view/team-view.module').then(m => m.TeamViewModule)
   },

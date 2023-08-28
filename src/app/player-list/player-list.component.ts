@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Player } from '../shared/player';
 import { HeaderTextService } from '../header-text.service';
 import { PlayerService } from './player/player.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ov-player-list',
@@ -11,13 +12,12 @@ import { PlayerService } from './player/player.service';
 export class PlayerListComponent implements OnInit {
      @Input()
      playerList: Player[] = [];
-
-     constructor(private headerService: HeaderTextService, private playerService: PlayerService) { 
+  
+     constructor(private headerService: HeaderTextService, private playerService: PlayerService, private router: Router) { 
       this.headerService.setHeaderText('Players Page');
      }
 
      ngOnInit() {
-       //this.headerService.setHeaderText('Players Page');
        this.loadEntities();
      }
      loadEntities() {
