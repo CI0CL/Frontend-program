@@ -25,8 +25,7 @@ export class TeamService {
 
     const useUrl: string = `${this.apiUrl}/${team.id}`;
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin':'*'
+      'Content-Type': 'application/json'
   })
   const dataToUpdate = {
     team_name: team.name,

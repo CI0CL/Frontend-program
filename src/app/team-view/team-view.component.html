@@ -31,25 +31,21 @@
     <div class="grid-item"></div>
     <div class="grid-item"></div>
     <div class="grid-item">
-        <div>
-            <form (ngSubmit)="OnUpdate(team)">
-                <p>Player Id: {{team.id}}</p>
-                <div class="form-group">
-                    <label for="name">team name:</label>
-                    <input id="name" name="name" [(ngModel)]="team.name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="country">Country:</label>
-                    <input id="country" name="country" [(ngModel)]="team.country" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="city">City:</label>
-                    <input id="city" name="city" [(ngModel)]="team.city" class="form-control" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Update Team</button>
-            </form>
-        </div>
-        <ov-form></ov-form>
+        <form (ngSubmit)="OnUpdate(team)">
+            <p>Player Id: {{team.id}}</p>
+            <div class="form-group">
+                <label for="name">team name:</label>
+                <input id="name" name="name" [(ngModel)]="team.name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input id="country" name="country" [(ngModel)]="team.country" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input id="city" name="city" [(ngModel)]="team.city" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Team</button>
+        </form>
     </div>
-    <div class="grid-item"></div>
 </div>

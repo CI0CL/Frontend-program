@@ -24,9 +24,9 @@ export class PlayerService {
   updatePlayer(player: Player): Observable<Player> {
 
     const useUrl: string = `${this.apiUrl}/${player.id}`;
+    `${this.apiUrl}/${player.id}`
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin':'*'
+      'Content-Type': 'application/json'
     })
     const dataToUpdate = {
       name: player.name,
