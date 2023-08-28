@@ -39,6 +39,4 @@ export class PlayerViewComponent {
   
 // }
 }
-function ngOnDestroy() {
-    throw new Error('Function not implemented.');
-  }
+

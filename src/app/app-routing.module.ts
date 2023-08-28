@@ -26,7 +26,7 @@ const routes: Routes = [
     loadChildren: () =>
     import('./player-list-overview/player-list-overview.module').then(m=> m.PlayerlistOverviewModule)},
   {
-    path: 'teams/team',
+    path: 'teams/:id',
     loadChildren: () =>
      import('./team-view/team-view.module').then(m => m.TeamViewModule)
   },

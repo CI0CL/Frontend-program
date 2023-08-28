@@ -8,8 +8,8 @@ import { MatchesOverviewModule } from './matches-overview/matches-overview.modul
 import { TeamListOverviewModule } from './team-list-overview/team-list-overview.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { PlayerViewComponent } from './player-view/player-view.component';
 import { PlayerViewModule } from './player-view/player-view.module';
+import { TeamViewModule } from './team-view/team-view.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { PlayerViewModule } from './player-view/player-view.module';
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-    PlayerViewModule
+    PlayerViewModule,
+    TeamViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
