@@ -25,6 +25,6 @@ const routes: Routes = [
     
 
   ],
-  exports:[PlayerListComponent, PlayerComponent,SearchComponent,PlayerFilterPipe]
+  exports:[PlayerListComponent, PlayerComponent, SearchComponent, PlayerFilterPipe]
 })
 export class PlayerListModule { }

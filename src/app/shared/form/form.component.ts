@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Player } from '../player';
 
 @Component({
   selector: 'ov-form',
@@ -11,10 +10,11 @@ export class FormComponent {
   formData: any;
   constructor(private http: HttpClient) {} // Inject HttpClient
 
-  updatePlayer(formData: any) {
+  /*updateData(formData: any) {
     if (formData.name != null) {
-      this.http.post('http://8081/api/players', formData)
+      this.http.put('http://8081/api/players', formData) // Hardcoded!
     }
   }
+  */
 
 }

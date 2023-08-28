@@ -50,16 +50,12 @@ export class PlayerViewComponent {
       this.player = player;//
     });
   }
-  // loadEntity() {
-  //   this.playerService.getPlayer().subscribe(data => {
-  //     this.player = data;
-  //   });
 
-  // ngOnDestroy() 
-  //   // Unsubscribe to prevent memory leaks
-  //   if (this.subscription) {
-  //     this.subscription.unsubscribe();
-  //   }
-  
-// }
+  ngOnDestroy() {
+    // Unsubscribe to prevent memory leaks
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
+
 }
