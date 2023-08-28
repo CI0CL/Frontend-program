@@ -18,7 +18,7 @@ export class TeamService {
   }
 
   getTeamByName(teamName: string): Observable<Team>{
-    return this.http.get<Team>(`${this.apiUrl}/${teamName}`);
+    return this.http.get<Team>(`${this.apiUrl}/by-name/${teamName}`);
   }
 
   getTeam(teamId: number): Observable<Team> {
@@ -32,7 +32,7 @@ export class TeamService {
       'Content-Type': 'application/json'
   })
   const dataToUpdate = {
-    teamName: team.teamName,
+    teamName: team.name,
     country: team.country,
     city: team.city
   };

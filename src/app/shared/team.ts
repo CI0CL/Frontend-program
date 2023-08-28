@@ -1,6 +1,6 @@
 export interface Team {
     id: number;
-    teamName: string;
+    name: string;
     country: string;
     city: string;
 }

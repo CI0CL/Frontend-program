@@ -45,6 +45,16 @@ export class PlayerViewComponent {
     );  
   }
 
+  deleteTeam(player3: Player){
+    if (this.player) {
+      this.playerService.deletePlayer(this.player.id).subscribe(() => {
+        // Handle successful deletion, e.g., navigate back to a list
+      });
+    }
+
+
+  }
+
   
 
   ngOnDestroy() {
