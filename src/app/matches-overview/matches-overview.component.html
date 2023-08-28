@@ -1,12 +1,3 @@
 <ov-matches class = "Match"></ov-matches>
 <ov-search class = "search" (search)="onSearch($event)"></ov-search>
 <ov-matches [matches]="matches | MatchFilter: query "></ov-matches>
-<nav class = "nav-container">
-  <li class = "nav-button">
-    <a routerLink="/matches/match"
-     routerLinkActive="active"
-     [routerLinkActiveOptions]="{exact:true}">
-    Match
-    </a>
-  </li>
-</nav> 

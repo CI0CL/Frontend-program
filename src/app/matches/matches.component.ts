@@ -23,6 +23,5 @@ export class MatchesComponent implements OnInit {
     ngOnInit() {
     this.headerService.setHeaderText('Matches Page');
     this.loadEntities();
-
   }
 }
