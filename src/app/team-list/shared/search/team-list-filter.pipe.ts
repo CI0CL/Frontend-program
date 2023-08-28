@@ -9,7 +9,7 @@ export class TeamFilterPipe implements PipeTransform {
 
   transform(products: Team[], filter: string = ''): Team[] {
     const filterLowercase = filter.toLowerCase();
-    return products.filter(({name}) => name.toLowerCase().indexOf(filterLowercase) !== -1);
+    return products.filter(({teamName}) => teamName.toLowerCase().indexOf(filterLowercase) !== -1);
   }
 
 }

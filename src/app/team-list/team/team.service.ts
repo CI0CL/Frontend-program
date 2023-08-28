@@ -17,6 +17,10 @@ export class TeamService {
     return this.http.get<Team[]>(this.apiUrl);
   }
 
+  getTeamByName(teamName: string): Observable<Team>{
+    return this.http.get<Team>(`${this.apiUrl}/${teamName}`);
+  }
+
   getTeam(teamId: number): Observable<Team> {
     return this.http.get<Team>(`${this.apiUrl}/${teamId}`);
   }
@@ -28,7 +32,7 @@ export class TeamService {
       'Content-Type': 'application/json'
   })
   const dataToUpdate = {
-    team_name: team.name,
+    teamName: team.teamName,
     country: team.country,
     city: team.city
   };
