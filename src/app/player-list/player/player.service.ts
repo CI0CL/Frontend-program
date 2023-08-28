@@ -25,7 +25,8 @@ export class PlayerService {
 
     const useUrl: string = `${this.apiUrl}/${player.id}`;
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin':'*'
     })
     const dataToUpdate = {
       name: player.name,
@@ -33,9 +34,7 @@ export class PlayerService {
       position: player.position,
       number: player.number
     };
-
-    // NOTE: Patch mapping DOES NOT work here: inform backend!
-    return this.http.put<Player>(useUrl,
-      dataToUpdate, {headers});
+    
+    return this.http.patch<Player>(useUrl, dataToUpdate, {headers});
   }
 }

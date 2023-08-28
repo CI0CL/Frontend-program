@@ -10,11 +10,4 @@ export class FormComponent {
   formData: any;
   constructor(private http: HttpClient) {} // Inject HttpClient
 
-  /*updateData(formData: any) {
-    if (formData.name != null) {
-      this.http.put('http://8081/api/players', formData) // Hardcoded!
-    }
-  }
-  */
-
 }

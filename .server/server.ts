@@ -173,7 +173,7 @@ server.delete('/cart/:id', async (request, reply) => {
   return reply.status(204).send();
 });
 
-server.listen({port: 8080}, (err, address) => {
+server.listen({port: 8081}, (err, address) => {
   if (err) {
     console.error(err);
     process.exit(1);
