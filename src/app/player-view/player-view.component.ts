@@ -16,7 +16,7 @@ export class PlayerViewComponent {
 
   private subscription: Subscription;
 
-  constructor(private headerService: HeaderTextService, private playerService :PlayerService, private route: ActivatedRoute,) {
+  constructor(private headerService: HeaderTextService, private playerService :PlayerService, private route: ActivatedRoute) {
     this.headerService.setHeaderText('Player page'); // Set header text in constructor
   }
 
