@@ -15,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [PlayerListComponent, PlayerComponent, SearchComponent,PlayerFilterPipe],
+  declarations: [PlayerListComponent, PlayerComponent, SearchComponent, PlayerFilterPipe],
   imports: [
     CommonModule,
     FormsModule,
@@ -25,6 +25,6 @@ const routes: Routes = [
     
 
   ],
-  exports:[PlayerListComponent, PlayerComponent,SearchComponent,PlayerFilterPipe]
+  exports:[PlayerListComponent, PlayerComponent, SearchComponent, PlayerFilterPipe]
 })
 export class PlayerListModule { }

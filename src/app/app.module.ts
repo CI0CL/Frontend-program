@@ -8,8 +8,6 @@ import { MatchesOverviewModule } from './matches-overview/matches-overview.modul
 import { TeamListOverviewModule } from './team-list-overview/team-list-overview.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { PlayerViewComponent } from './player-view/player-view.component';
-import { PlayerViewModule } from './player-view/player-view.module';
 import { TeamViewModule } from './team-view/team-view.module';
 import { FormsModule } from '@angular/forms';
 import { MatchViewModule } from './match-view/match-view.module';
@@ -23,6 +21,7 @@ import { MatchViewModule } from './match-view/match-view.module';
     BrowserAnimationsModule,
     PlayerlistOverviewModule,
     TeamListOverviewModule,
+    TeamViewModule,
     MatchesOverviewModule,
     AppRoutingModule,
     HomeModule,
