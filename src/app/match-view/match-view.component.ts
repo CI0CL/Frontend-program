@@ -28,7 +28,7 @@ export class MatchViewComponent implements OnDestroy {
 
   private subscription: Subscription;
 
-  constructor(private headerService: HeaderTextService, private matchService : MatchService, /*private route: ActivatedRoute*/) {
+  constructor(private headerService: HeaderTextService, private matchService : MatchService,private route:ActivatedRoute) {
 
     this.headerService.setHeaderText('Match page'); // Set header text in constructor
   }

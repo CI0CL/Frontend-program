@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TeamViewModule } from './team-view/team-view.module';
 import { FormsModule } from '@angular/forms';
 import { MatchViewModule } from './match-view/match-view.module';
+import { PlayerViewModule } from './player-view/player-view.module';
 
 @NgModule({
   declarations: [

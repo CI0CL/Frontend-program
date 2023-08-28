@@ -42,3 +42,4 @@ export class MatchService {
     return this.http.put<Match>(useUrl,
       dataToUpdate, {headers});
   }
+}
