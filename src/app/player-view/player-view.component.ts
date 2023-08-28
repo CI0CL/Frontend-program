@@ -44,10 +44,8 @@ export class PlayerViewComponent {
   }
   
   loadEntity() {
-    this.playerService.getPlayer().subscribe(data => {
-      this.player = data;
     const id = this.route.snapshot.params['id'];
-    //this.playerService.getPlayer(id)
+    this.playerService.getPlayer(id)
     .subscribe((player) => {
       this.player = player;//
     });
@@ -65,4 +63,3 @@ export class PlayerViewComponent {
   
 // }
 }
-

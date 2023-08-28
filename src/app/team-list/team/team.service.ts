@@ -12,8 +12,8 @@ export class TeamService {
   private apiUrl = 'http://localhost:8081/api/teams'; //NOTE: Error in back-end!
   constructor(private http: HttpClient) { }
 
-  //getTeams(): Observable<Team[]> {
-    //return this.http.get<Team[]>(this.apiUrl);
+  getTeams(): Observable<Team[]> {
+    return this.http.get<Team[]>(this.apiUrl);
   }
 
   getTeam(teamId: number): Observable<Team> {
