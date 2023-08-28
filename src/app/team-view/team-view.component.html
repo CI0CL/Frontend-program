@@ -4,14 +4,17 @@
         </div>
     </div>
 
-    <div class="grid-item">
-        <section class = "text">
-        <p><strong>id:</strong> {{ team.id}}</p>
-        <p><strong>City:</strong> {{ team.city }}</p>
+    <div *ngIf="team">
+        <h2>Player Details</h2>
+        <p><strong>Name:</strong> {{ team.teamName }}</p>
         <p><strong>Country:</strong> {{ team.country }}</p>
-        <p><strong>Country:</strong> {{ team.teamName }}</p>
-        </section>
-    </div>
+        <p><strong>City: </strong>{{team.city}}</p>
+        <p><strong>id:</strong> {{ team.id }}</p>
+        <!-- Add more player details as needed -->
+      </div>
+      <div *ngIf="!team">
+        <p>Loading player details...</p>
+      </div>
     <div class="grid-item">
         <section class = "text">
             <p>Here we would put a short description, and fun facts</p>

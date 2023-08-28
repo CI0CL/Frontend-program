@@ -41,14 +41,13 @@ export class PlayerViewComponent {
 
   ngOnInit() {
     this.loadEntity();
+  }
+  
+  loadEntity() {
     const id = this.route.snapshot.params['id'];
     this.playerService.getPlayer(id)
-    .subscribe((player) => {this.player = player;}
-  }
-
-  loadEntity() {
-    this.playerService.getPlayer(this.player.id).subscribe(data => {
-      this.player = data;
+    .subscribe((player) => {
+      this.player = player;//
     });
   }
   // loadEntity() {
@@ -64,6 +63,3 @@ export class PlayerViewComponent {
   
 // }
 }
-function ngOnDestroy() {
-    throw new Error('Function not implemented.');
-  }

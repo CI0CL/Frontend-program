@@ -1,7 +1,16 @@
-<div class="team">
-    <!-- <h3>{{ match.team1 }}</h3>
-    <p>Date: {{ match.team2 }}</p> -->
-    <p>Team name: {{team.teamName}}</p>
-    <p>Team city: {{team.city}}</p>
-    <p>Team country: {{team.country}}</p>
-  </div>
+<div class = team>
+    <p><strong>Name:</strong> {{team.teamName}}</p>
+    <p><strong>country:</strong> {{team.country}}</p>
+    <p><strong>city: </strong> {{team.city}}</p>
+    <p><strong>Id: </strong>{{team.id}}</p>
+    <nav>
+        <li class="nav-button">
+            <a [routerLink]="'/teams/' + team.id"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact:true}">
+                team
+            </a>
+        </li>
+    </nav>
+<!-- <button (click)="viewPlayer(player.id)">View Player</button> -->
+</div>

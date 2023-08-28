@@ -4,7 +4,6 @@ import { HomeComponent } from "./home/home.component";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   // { path: 'players/:id', component: PlayerViewComponent }, // :id is the player ID
@@ -28,7 +27,7 @@ const routes: Routes = [
     loadChildren: () =>
     import('./player-list-overview/player-list-overview.module').then(m=> m.PlayerlistOverviewModule)},
   {
-    path: 'teams/team',
+    path: 'teams/:id',
     loadChildren: () =>
      import('./team-view/team-view.module').then(m => m.TeamViewModule)
   },

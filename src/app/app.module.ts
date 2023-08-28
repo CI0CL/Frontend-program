@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayerViewComponent } from './player-view/player-view.component';
 import { PlayerViewModule } from './player-view/player-view.module';
+import { TeamViewModule } from './team-view/team-view.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -25,9 +26,10 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-
     PlayerViewModule,
-    FormsModule
+    FormsModule,
+    PlayerViewModule,
+    TeamViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

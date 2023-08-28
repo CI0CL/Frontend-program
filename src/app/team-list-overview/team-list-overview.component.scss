@@ -1,8 +1,4 @@
 .nav-container {
-    position: absolute;
-    top: 300px; /* Adjust this value to position vertically */
-    right: 40px; /* Adjust this value to position horizontally */
-    left: 10px;
     display: flex; /* Display buttons in a row */
     gap: 40px; /* Adjust this value to control the space between buttons */
   }
@@ -33,6 +29,6 @@
 .search{
     position:absolute;
     top: 131px;
-    left: 20px;
+    right: 20px;
 }
   

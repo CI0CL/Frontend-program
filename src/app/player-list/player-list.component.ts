@@ -13,11 +13,12 @@ export class PlayerListComponent implements OnInit {
      @Input()
      playerList: Player[] = [];
 
+  
      constructor(private headerService: HeaderTextService, private playerService: PlayerService, private router: Router) { 
-      this.headerService.setHeaderText('Players Page');}
+      this.headerService.setHeaderText('Players Page');
+     }
 
      ngOnInit() {
-       //this.headerService.setHeaderText('Players Page');
        this.loadEntities();
      }
      loadEntities() {
