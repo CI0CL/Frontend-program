@@ -1,17 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
-import { PlayerViewModule } from './player-view/player-view.module';
-import { PlayerViewComponent } from './player-view/player-view.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  {
-    path: 'players',
-    loadChildren: () =>
-      import('./player-list-overview/player-list-overview.module').then(m => m.PlayerlistOverviewModule)
-  },
   // { path: 'players/:id', component: PlayerViewComponent }, // :id is the player ID
   // { path: '', redirectTo: '/players', pathMatch: 'full' },
   {
@@ -29,6 +22,9 @@ const routes: Routes = [
     loadChildren: () =>
      import('./player-view/player-view.module').then(m => m.PlayerViewModule)
   },
+  {path: 'players',
+    loadChildren: () =>
+    import('./player-list-overview/player-list-overview.module').then(m=> m.PlayerlistOverviewModule)},
   {
     path: 'teams/team',
     loadChildren: () =>
