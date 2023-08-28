@@ -12,6 +12,7 @@ import { PlayerViewComponent } from './player-view/player-view.component';
 import { PlayerViewModule } from './player-view/player-view.module';
 import { TeamViewModule } from './team-view/team-view.module';
 import { FormsModule } from '@angular/forms';
+import { MatchViewModule } from './match-view/match-view.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     PlayerViewModule,
-    TeamViewModule
+    TeamViewModule,
+    MatchViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

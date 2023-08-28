@@ -7,8 +7,11 @@ import { SearchComponent } from './shared/search/search.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatchFilterPipe } from './shared/search/match-filter.pipe';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const routes: Routes = [
+  { path: '', component: MatchesComponent}
+];
 
 @NgModule({
   declarations: [MatchesComponent, MatchComponent, SearchComponent, MatchFilterPipe],
@@ -17,6 +20,7 @@ import { MatchFilterPipe } from './shared/search/match-filter.pipe';
     FormsModule,
     MatFormFieldModule,
     MatIconModule,
+    RouterModule.forChild(routes)
   ],
   exports:[MatchesComponent, MatchComponent, SearchComponent, MatchFilterPipe]
 })

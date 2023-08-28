@@ -4,16 +4,16 @@
         </div>
     </div>
 
-    <div class="grid-item">
-        <section class = "text">
-        <p><strong>date: </strong> {{ match.date}}</p>
-        <p><strong>location: </strong> {{ match.location}}</p>
-        <p><strong>matchId: </strong> {{ match.matchId}}</p>
-        <p><strong>Team 1 score: </strong> {{ match.team1Score}}</p>        
-        <p><strong>Team 2 score: </strong> {{ match.team2Score}}</p>
-        <p><strong>time: </strong> {{ match.time}}</p>
-        </section>
-    </div>
+    <div *ngIf="match">
+        <h2>Match Details</h2>
+        <p><strong>Match Score: </strong>{{match.team1Score}} - {{match.team2Score}}</p>
+        <p><strong>Date: </strong>{{match.date}}</p>
+        <p><strong>time: </strong>{{match.time}}</p>
+        <!-- Add more player details as needed -->
+      </div>
+      <div *ngIf="!match">
+        <p>Loading match details...</p>
+      </div>
     <div class="grid-item">
         <section class = "text">
             <p>Here we would put a short description, and fun facts</p>
