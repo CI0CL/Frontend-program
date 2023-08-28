@@ -3,19 +3,23 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
+import { FormComponent } from './form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [],
+  declarations: [FormComponent],
   imports: [
     CommonModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   exports: [
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormComponent
   ],
 })
 export class SharedModule {
