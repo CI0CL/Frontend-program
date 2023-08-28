@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 
 @Component({
-  selector: 'ov-search',
+  selector: 'ov-search-team',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })

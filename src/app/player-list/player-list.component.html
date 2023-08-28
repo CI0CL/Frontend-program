@@ -1,12 +1,12 @@
-<!-- <div class="player-list-container">
+<div class="player-list-container">
   <div class="search-bar">
     <ov-search (search)="onSearch($event)"></ov-search>
   </div>
-</div> -->
-<div class = player-list>
-  <ul class="playerlist">
-   <li *ngFor="let player of playerList">
-    <ov-player class = "player" [player]="player"></ov-player>
-   </li>
-  </ul>
+  <div class="player-list">
+    <ul class="playerlist">
+      <li *ngFor="let player of playerList">
+        <ov-player class="player" [player]="player"></ov-player>
+      </li>
+    </ul>
+  </div>
 </div>

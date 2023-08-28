@@ -2,5 +2,5 @@
   <h1>Team Overview</h1>
 </div>
 <ov-team-list class = "Team"></ov-team-list>
-<ov-search class = "search" (search)="onSearch($event)"></ov-search>
+<ov-search-team class = "search" (search)="onSearch($event)"></ov-search-team>
 <ov-team-list [TeamList]=" TeamList | TeamFilter: query "></ov-team-list>
