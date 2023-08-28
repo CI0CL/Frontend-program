@@ -38,7 +38,7 @@ export class MatchService {
       location: match.location
     };
 
-    // NOTE: Patch mapping DOES NOT work here: inform backend!
-    return this.http.put<Match>(useUrl,
+    return this.http.patch<Match>(useUrl,
       dataToUpdate, {headers});
   }
+}
