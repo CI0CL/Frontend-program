@@ -1,5 +1,6 @@
 .playerList {
-    display: flex;
+    // max-width: 400px;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
@@ -11,7 +12,7 @@
     font-weight:700;
     margin:30px;
 }
-.search{
+.searchBar{
     position:absolute;
     top: 131px;
     left: 20px;

@@ -10,10 +10,10 @@ import { HeaderTextService } from '../header-text.service';
 export class PlayerListOverviewComponent implements OnInit {
   playerlist: Player[]
 
-  query: string;
-  onSearch(query: string): void {
-    this.query = query;
-  }
+  // query: string;
+  // onSearch(query: string): void {
+  //   this.query = query;
+  // }
 
   constructor(private headerService: HeaderTextService) { }
 

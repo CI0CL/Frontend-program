@@ -4,8 +4,10 @@
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
     text-align: center;
+    display: flex; /* Add this to center align content horizontally */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
 .player p {
@@ -38,4 +40,8 @@
     text-decoration: none;
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  .nav-button a {
+    text-decoration: none;
+    color:hwb(192 26% 54%)
   }

@@ -13,11 +13,10 @@ export class TeamComponent implements OnInit {
 
    constructor(private router: Router) { }
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-        viewTeam(teamId: number) {
-          // Navigate to the player view page with the player's ID as a parameter
-          this.router.navigate(['/team', teamId]);
-        }
+  ngOnInit() {}
+
+    viewTeam(teamId: number) {
+      // Navigate to the player view page with the player's ID as a parameter
+       this.router.navigate(['/team', teamId]);
+     }
    }

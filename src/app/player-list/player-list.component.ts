@@ -25,5 +25,8 @@ export class PlayerListComponent implements OnInit {
         this.playerList = data;
       });
     }
-
+    query: string;
+    onSearch(query: string): void {
+    this.query = query;
+  }
 }
