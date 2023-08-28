@@ -13,10 +13,10 @@ export class TeamListComponent implements OnInit {
      @Input()
      TeamList: Team[] = [];
 
-     constructor(private headerService: HeaderTextService, private teamService: TeamService, private router :Router) { }
+     constructor(private headerService: HeaderTextService, private teamService: TeamService, private router :Router) {
+     this.headerService.setHeaderText('Teams Page');}
 
      ngOnInit() {
-       this.headerService.setHeaderText('Teams Page');
        this.loadEntities();
      }
      loadEntities(){

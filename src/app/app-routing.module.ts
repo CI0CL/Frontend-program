@@ -41,7 +41,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), MatInputModule, MatFormFieldModule],
+  imports: [
+  MatInputModule, // for the in-browser error
+  MatFormFieldModule, // for the in-browser error
+  RouterModule.forRoot(routes),
+],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

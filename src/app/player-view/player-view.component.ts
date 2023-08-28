@@ -12,18 +12,44 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlayerViewComponent {
   @Input() player: Player;
+  playerData = {
+    id: 0,
+    name: '',
+    position: '',
+    age: 0,
+    number: 0,
+  };
+
   private subscription: Subscription;
 
   constructor(private headerService: HeaderTextService, private playerService :PlayerService, private route: ActivatedRoute,) {
     this.headerService.setHeaderText('Player page'); // Set header text in constructor
   }
+
+  OnUpdate(player2: any){
+    this.playerData = player2;
+    this.playerService.updatePlayer(this.playerData).subscribe(
+      (response) => {
+        return response;
+      },
+      (error) => {
+        return error;
+      }
+      
+    );  
+  }
+
   ngOnInit() {
-    this.headerService.setHeaderText('Players Page');
-    // this.loadEntity();
+    this.loadEntity();
+  }
+  
+  loadEntity() {
+    this.playerService.getPlayer().subscribe(data => {
+      this.player = data;
     const id = this.route.snapshot.params['id'];
-    this.playerService.getPlayer(id)
+    //this.playerService.getPlayer(id)
     .subscribe((player) => {
-      this.player = player;
+      this.player = player;//
     });
   }
   // loadEntity() {
