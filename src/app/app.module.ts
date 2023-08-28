@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayerViewModule } from './player-view/player-view.module';
 import { TeamViewModule } from './team-view/team-view.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TeamViewModule } from './team-view/team-view.module';
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
+    FormsModule,
     PlayerViewModule,
     TeamViewModule
   ],

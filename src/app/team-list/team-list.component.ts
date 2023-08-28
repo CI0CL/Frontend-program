@@ -3,6 +3,7 @@ import { Team } from '../shared/team';
 import { HeaderTextService } from '../header-text.service';
 import { Router } from '@angular/router';
 import { TeamService } from './team/team.service';
+
 @Component({
   selector: 'ov-team-list',
   templateUrl: './team-list.component.html',
