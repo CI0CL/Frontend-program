@@ -43,5 +43,9 @@ export class TeamService {
   return this.http.patch<Team>(useUrl,
     dataToUpdate, {headers});
   }
+  searchPlayer(query: string): Observable<Team[]> {
+    const searchUrl = `${this.apiUrl}/search?query=${query}`;
+    return this.http.get<Team[]>(searchUrl);
+  }
 }
 

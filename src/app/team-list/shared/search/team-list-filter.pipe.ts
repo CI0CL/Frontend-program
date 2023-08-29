@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Player } from 'src/app/shared/player';
 import { Team } from 'src/app/shared/team';
 
 @Pipe({

@@ -56,4 +56,9 @@ export class PlayerService {
     
     return this.http.post<Player>(useUrl, dataToCreate, {headers});
   }
+
+  searchPlayer(query: string): Observable<Player[]> {
+    const searchUrl = `${this.apiUrl}/search?query=${query}`;
+    return this.http.get<Player[]>(searchUrl);
+  }
 }

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class PlayerListComponent implements OnInit {
      @Input()
      playerList: Player[] = [];
+     filteredPlayerList: Player[] = [];
 
   
      constructor(private headerService: HeaderTextService, private playerService: PlayerService, private router: Router) { 
@@ -20,14 +21,31 @@ export class PlayerListComponent implements OnInit {
 
      ngOnInit() {
        this.loadEntities();
+        // Load all players initially
+       this.playerService.getPlayers().subscribe((players) => {
+      this.playerList = players;
+      // Initialize filteredPlayerList with all players
+      this.filteredPlayerList = [...this.playerList];
+    });
      }
      loadEntities() {
       this.playerService.getPlayers().subscribe(data => {
         this.playerList = data;
       });
     }
-    query: string;
-    onSearch(query: string): void {
-    this.query = query;
+
+  onSearch(query: string) {
+    // Handle search events
+    if (query) {
+      // Perform filtering based on the query
+      this.filteredPlayerList = this.playerList.filter((player) =>
+        player.name.toLowerCase().includes(query.toLowerCase()) ||
+        player.position.toLowerCase().includes(query.toLowerCase()) ||
+        player.age.toLocaleString().includes(query.toLowerCase())
+      );
+    } else {
+      // If the query is empty, show all players
+      this.filteredPlayerList = [...this.playerList];
+    }
   }
 }

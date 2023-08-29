@@ -1,5 +1,6 @@
 
   <p>Search Teams</p>
   <input matInput type="text" [(ngModel)]="query" (ngModelChange)="onChange($event)">
-  
+  <button mat-raised-button color="primary" (click)="searchTeam()">Search</button>
+  <button mat-raised-button color="warn" (click)="clearSearch()">Clear</button>
 

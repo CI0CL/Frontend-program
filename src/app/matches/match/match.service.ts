@@ -45,4 +45,8 @@ export class MatchService {
     return this.http.patch<Match>(useUrl,
       dataToUpdate, {headers});
   }
+  searchMatches(query: string): Observable<Match[]> {
+    const searchUrl = `${this.apiUrl}/search?query=${query}`;
+    return this.http.get<Match[]>(searchUrl);
+  }
 }
