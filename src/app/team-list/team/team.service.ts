@@ -3,13 +3,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Team } from 'src/app/shared/team';
 
-@Injectable ({
+@Injectable({
   providedIn: 'root'
 })
 
 export class TeamService {
 
+
   private apiUrl = 'http://localhost:8081/api/teams';
+  team: Team
 
   constructor(private http: HttpClient) { }
 
@@ -17,8 +19,14 @@ export class TeamService {
     return this.http.get<Team[]>(this.apiUrl);
   }
 
-  getTeamByName(teamName: string): Observable<Team>{
-    return this.http.get<Team>(`${this.apiUrl}/by-name/${teamName}`);
+  async getTeamByName(teamName: string): Promise<Team> {
+    try {
+      const response = await this.http.get<Team>(`${this.apiUrl}/by-name/${teamName}`).toPromise();
+      return response;
+    } catch (error) {
+      // Handle errors here
+      throw error;
+    }
   }
 
   getTeam(teamId: number): Observable<Team> {
@@ -30,18 +38,17 @@ export class TeamService {
   }
 
   updateTeam(team: Team): Observable<Team> {
-
     const useUrl: string = `${this.apiUrl}/${team.id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
-  })
-  const dataToUpdate = {
-    teamName: team.name,
-    country: team.country,
-    city: team.city
-  };
-  return this.http.patch<Team>(useUrl,
-    dataToUpdate, {headers});
+    })
+    const dataToUpdate = {
+      teamName: team.name,
+      country: team.country,
+      city: team.city
+    };
+    return this.http.patch<Team>(useUrl,
+      dataToUpdate, { headers });
   }
 }
 
