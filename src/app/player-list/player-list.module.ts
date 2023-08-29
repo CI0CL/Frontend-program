@@ -6,7 +6,7 @@ import { SharedModule } from "../shared/shared.module";
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './shared/search/search.component';
 import { PlayerFilterPipe } from './shared/search/player-list-filter.pipe';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldControl, MatFormFieldModule} from '@angular/material/form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 

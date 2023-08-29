@@ -1,7 +1,11 @@
 <div class="playersOverview">
   <h1>Players Overview</h1>
+  <!-- <div class="searchBar">
+    <ov-search (search)="onSearch($event)"></ov-search>
+  </div> -->
+  <ov-player-list></ov-player-list>
+  
 </div>
-<ov-player-list class = "playerList"></ov-player-list>
 
 <ov-search class = "search" (search)="onSearch($event)"></ov-search>
 <ov-player-list [playerList]=" playerlist| PlayerFilter: query "></ov-player-list>

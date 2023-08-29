@@ -17,6 +17,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     PlayerListModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ],
   exports: [PlayerListOverviewComponent]

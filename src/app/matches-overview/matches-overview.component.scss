@@ -1,23 +1,4 @@
-.nav-container {
-    position: absolute;
-    top: 300px; /* Adjust this value to position vertically */
-    right: 40px; /* Adjust this value to position horizontally */
-    left: 10px;
-    display: flex; /* Display buttons in a row */
-    gap: 40px; /* Adjust this value to control the space between buttons */
-  }
-  
-  .nav-button {
-    list-style: none;
-    padding: 10px 30px; /* Adjust padding as needed */
-    background-color: #ababac; /* Button background color */
-    color: #fff; /* Button text color */
-    text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .Match {
+.Match {
     display: flex;
     justify-content: center;
     align-items: center;

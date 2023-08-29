@@ -37,10 +37,6 @@
     font-style: italic;
     color: #888;
 }
-.nav-container {
-    display: flex; /* Display buttons in a row */
-    gap: 40px; /* Adjust this value to control the space between buttons */
-  }
   
   .nav-button {
     list-style: none;
@@ -50,4 +46,8 @@
     text-decoration: none;
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  .nav-button a {
+    text-decoration: none;
+    color:hwb(192 26% 54%)
   }

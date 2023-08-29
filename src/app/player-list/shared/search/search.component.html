@@ -1,9 +1,3 @@
-<mat-form-field appearance="fill">
-    <p>Search Players</p>
-  <mat-label>Search Players</mat-label>
-  <input matInput type="text" [(ngModel)]="query" (ngModelChange)="onChange($event)">
-  <button *ngIf="query" matSuffix mat-icon-button aria-label="Clear" (click)="clear()">
-    <mat-icon>close</mat-icon>
-  </button>
-</mat-form-field>
 
+  <p>Search Players</p>
+  <input matInput type="text" [(ngModel)]="query" (ngModelChange)="onChange($event)">
