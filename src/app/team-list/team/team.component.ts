@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent implements OnInit {
-  @Input()
-  team: Team;
+  @Input() team: Team;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    
+  }
 
     viewTeam(teamId: number) {
        this.router.navigate(['/team', teamId]);

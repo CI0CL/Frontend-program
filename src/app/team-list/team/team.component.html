@@ -3,6 +3,7 @@
     <p><strong>country:</strong> {{team.country}}</p>
     <p><strong>city: </strong> {{team.city}}</p>
     <p><strong>Id: </strong>{{team.id}}</p>
+
     <nav>
         <li class="nav-button">
             <a [routerLink]="'/teams/' + team.id"
@@ -10,11 +11,6 @@
              [routerLinkActiveOptions]="{exact:true}">
                 team
             </a>
-            <!--<a [routerLink]="'/teams/by-name/' + team.name"
-             routerLinkActive="active"
-             [routerLinkActiveOptions]="{exact:true}">
-                team
-            </a>-->
         </li>
     </nav>
 <!-- <button (click)="viewPlayer(player.id)">View Player</button> -->

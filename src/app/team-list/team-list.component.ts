@@ -24,4 +24,8 @@ export class TeamListComponent implements OnInit {
         this.TeamList = data;
       })
      }
+     query: string;
+    onSearch(query: string): void {
+    this.query = query;
+  }
   }

@@ -1,5 +1,12 @@
-<ul class="TeamList">
-    <li *ngFor="let team of TeamList">
-      <ov-team [team]="team"></ov-team>
-    </li>
-  </ul>
+<div class="team-list-container">
+<div class="search-bar">
+  <ov-search-team (search)="onSearch($event)"></ov-search-team>
+</div>
+ <div class="team-list">
+   <ul class="TeamList">
+     <li *ngFor="let team of TeamList">
+       <ov-team [team]="team"></ov-team>
+     </li>
+   </ul>
+  </div>
+</div>
