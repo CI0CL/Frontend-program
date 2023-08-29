@@ -15,12 +15,8 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // goToPlayerPage(playerId: number) {
-  //   // Navigate to the player page with the player's ID as a parameter
-  //   this.router.navigate(['/players', playerId]);
-  // }
+
   viewPlayer(playerId: number) {
-    // Navigate to the player view page with the player's ID as a parameter
     this.router.navigate(['/player', playerId]);
   }
 }

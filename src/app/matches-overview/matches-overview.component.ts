@@ -10,19 +10,12 @@ import { HeaderTextService } from '../header-text.service';
 })
 export class MatchesOverviewComponent implements OnInit {
   matches: Match[]
+  match: Match;
 
-  constructor(private headerService: HeaderTextService) { }
+  constructor(private headerService: HeaderTextService, protected matchService: MatchService) { }
 
   ngOnInit() {
     this.headerService.setHeaderText('Matches Page');
-  }
-  loadMatches() {
-    throw new Error('Method not implemented.');
-  }
-  
-  query: string;
-  onSearch(query: string): void {
-    this.query = query;
   }
 
 }

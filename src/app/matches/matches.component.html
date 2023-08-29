@@ -1,5 +1,12 @@
-<ul class="matches">
-    <li *ngFor="let match of matches">
-        <ov-match [match]="match"></ov-match>
+ <div class="matches-container">
+  <div class="search-bar">
+    <ov-search (search)="onSearch($event)"></ov-search>
+  </div>
+ <div class="matches">
+   <ul class="match">
+     <li *ngFor="let match of matches">
+        <ov-match class="match" [match]="match"></ov-match>
       </li>
     </ul>
+  </div>
+</div>

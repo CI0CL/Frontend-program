@@ -21,7 +21,6 @@ export class MatchViewComponent implements OnDestroy {
 
 
   constructor(private headerService: HeaderTextService, private matchService : MatchService, private route: ActivatedRoute) {
-
     this.headerService.setHeaderText('Match page'); // Set header text in constructor
   }
   ngOnInit() {
@@ -29,7 +28,7 @@ export class MatchViewComponent implements OnDestroy {
   }
   
   loadEntity() {
-    const id = this.route.snapshot.params['matchId'];
+    const id = this.route.snapshot.params['id'];
     this.matchService.getMatch(id)
     .subscribe((match) => {
       this.match = match;//
@@ -63,7 +62,3 @@ export class MatchViewComponent implements OnDestroy {
   }
 
 };
-
-function ngOnDestroy() {
-    throw new Error('Function not implemented.');
-  }

@@ -12,16 +12,20 @@ export class MatchesComponent implements OnInit {
     @Input()
     matches: Match[] = [];
 
-    constructor(private headerService: HeaderTextService, private matchService: MatchService) { }
+    constructor(private headerService: HeaderTextService, private matchService: MatchService) { 
+      this.headerService.setHeaderText('Matches Page');
+    }
+    ngOnInit() {
+    this.loadEntities();
+  }
 
     loadEntities() {
       this.matchService.getMatches().subscribe(data => {
         this.matches = data;
       });
     }
-
-    ngOnInit() {
-    this.headerService.setHeaderText('Matches Page');
-    this.loadEntities();
+    query: string;
+    onSearch(query: string): void {
+    this.query = query;
   }
 }
