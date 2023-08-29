@@ -5,9 +5,10 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
-  declarations: [FormComponent],
+  declarations: [FormComponent, SearchComponent],
   imports: [
     CommonModule,
     MatInputModule,

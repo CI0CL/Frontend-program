@@ -15,6 +15,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PlayerListModule,
     FormsModule,
     RouterModule.forChild(routes)

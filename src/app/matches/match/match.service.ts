@@ -21,6 +21,10 @@ export class MatchService {
     return this.http.get<Match>(`${this.apiUrl}/${matchId}`);
   }
 
+  deleteMatch(matchId:any): Observable<Match>{
+    return this.http.delete<Match>(`${this.apiUrl}/${matchId}`);
+  }
+
   updateMatch(match : Match) {
 
     const useUrl: string = `${this.apiUrl}/${match.matchId}`;
@@ -38,8 +42,7 @@ export class MatchService {
       location: match.location
     };
 
-    // NOTE: Patch mapping DOES NOT work here: inform backend!
-    return this.http.put<Match>(useUrl,
+    return this.http.patch<Match>(useUrl,
       dataToUpdate, {headers});
   }
 }

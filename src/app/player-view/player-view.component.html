@@ -6,9 +6,12 @@
 
     <div *ngIf="player">
         <h2>Player Details</h2>
+        <p><strong>id:</strong> {{ player.id }}</p>
         <p><strong>Name:</strong> {{ player.name }}</p>
         <p><strong>Age:</strong> {{ player.age }}</p>
-        <p><strong>id:</strong> {{ player.id }}</p>
+        <p><strong>Position:</strong> {{ player.position }}</p>
+        <p><strong>Number:</strong> {{ player.number }}</p>
+        
         <!-- Add more player details as needed -->
       </div>
       <div *ngIf="!player">
@@ -24,41 +27,34 @@
     <div class="grid-item"></div>
     <div class="grid-item">
         <div class="button">
-            <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                Delete</a>
+            <button (click)="onDelete()">Delete</button>
         </div>
     </div>
     <div class="grid-item">
-    
         <div>
-            <form (ngSubmit)="OnUpdate(playerData)">
-                <!--<ov-form [(ngModel)]="player.id" class="form-control" required></ov-form>-->
-                <!--<ov-form [(ngModel)]="player.image" class="form-control" required></ov-form>-->
+            <form (ngSubmit)="OnUpdate(player)">
+                <p>Player Id: {{player.id}}</p>
                 <div class="form-group">
                 <label for="name">Name:</label>
-                  <input id="name" name="name" [(ngModel)]="playerData.name" class="form-control" required>
+                  <input id="name" name="name" [(ngModel)]="player.name" class="form-control" required>
                 </div>
                 <div class="form-group">
                   <label for="position">Position:</label>
-                  <input id="position" name="position" [(ngModel)]="playerData.position" class="form-control" required>
+                  <input id="position" name="position" [(ngModel)]="player.position" class="form-control" required>
                 </div>
                 <div class="form-group">
                   <label for="age">Age:</label>
-                  <input id="age" name="age" [(ngModel)]="playerData.age" class="form-control" type="number" required>
+                  <input id="age" name="age" [(ngModel)]="player.age" class="form-control" required>
                 </div>
                 <div class="form-group">
                   <label for="number">Number:</label>
-                  <input id="number" name="number" [(ngModel)]="playerData.number" class="form-control" type="number" required>
+                  <input id="number" name="number" [(ngModel)]="player.number" class="form-control" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-          </div>
-    <ov-form></ov-form>
-
+                <button type="submit" class="btn btn-primary">Update Player</button>
+            </form>
+        </div>
+        </div>
 </div>
-</div>
-
-
 <!--
 
 

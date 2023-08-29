@@ -22,7 +22,7 @@ export class PlayerListComponent implements OnInit {
        this.loadEntities();
      }
      loadEntities() {
-      this.playerService.getplayers().subscribe(data => {
+      this.playerService.getPlayers().subscribe(data => {
         this.playerList = data;
       });
     }

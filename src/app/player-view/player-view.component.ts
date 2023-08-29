@@ -12,23 +12,29 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlayerViewComponent {
   @Input() player: Player;
-  playerData = {
-    id: 0,
-    name: '',
-    position: '',
-    age: 0,
-    number: 0,
-  };
+
 
   private subscription: Subscription;
 
-  constructor(private headerService: HeaderTextService, private playerService :PlayerService, private route: ActivatedRoute,) {
+  constructor(private headerService: HeaderTextService, private playerService :PlayerService, private route: ActivatedRoute) {
     this.headerService.setHeaderText('Player page'); // Set header text in constructor
   }
 
-  OnUpdate(player2: any){
-    this.playerData = player2;
-    this.playerService.updatePlayer(this.playerData).subscribe(
+  ngOnInit() {
+    this.loadEntity();
+  }
+
+  loadEntity() {
+    const id = this.route.snapshot.params['id'];
+    this.playerService.getPlayer(id)
+    .subscribe((player) => {
+      this.player = player;
+    });
+  }
+
+  OnUpdate(player2: Player){
+    this.player = player2;
+    this.playerService.updatePlayer(this.player).subscribe(
       (response) => {
         return response;
       },
@@ -39,17 +45,15 @@ export class PlayerViewComponent {
     );  
   }
 
-  ngOnInit() {
-    this.loadEntity();
-  }
-  
-  loadEntity() {
-    const id = this.route.snapshot.params['id'];
-    this.playerService.getPlayer(id)
-    .subscribe((player) => {
-      this.player = player;//
-    });
-  }
+  onDelete(){
+    if (this.player) {
+      this.playerService.deletePlayer(this.player.id).subscribe(() => {
+        // Handle successful deletion, e.g., navigate back to a list
+      });
+    }
+
+
+  }  
 
   ngOnDestroy() {
     // Unsubscribe to prevent memory leaks

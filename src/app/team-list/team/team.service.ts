@@ -17,22 +17,30 @@ export class TeamService {
     return this.http.get<Team[]>(this.apiUrl);
   }
 
+  getTeamByName(teamName: string): Observable<Team>{
+    return this.http.get<Team>(`${this.apiUrl}/by-name/${teamName}`);
+  }
+
   getTeam(teamId: number): Observable<Team> {
     return this.http.get<Team>(`${this.apiUrl}/${teamId}`);
+  }
+
+  deleteTeam(teamId: number) {
+    return this.http.delete<Team>(`${this.apiUrl}/${teamId}`);
   }
 
   updateTeam(team: Team): Observable<Team> {
 
     const useUrl: string = `${this.apiUrl}/${team.id}`;
     const headers = new HttpHeaders({
-    'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
   })
   const dataToUpdate = {
-    teamName: team.teamName,
+    teamName: team.name,
     country: team.country,
     city: team.city
   };
-  return this.http.put<Team>(useUrl,
+  return this.http.patch<Team>(useUrl,
     dataToUpdate, {headers});
   }
 }

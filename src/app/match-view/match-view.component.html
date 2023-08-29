@@ -23,46 +23,43 @@
     <div class="grid-item"></div>
     <div class="grid-item">
         <div class="button">
-            <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                Delete</a>
-        </div>
+            <button (click)="onDelete()">Delete</button></div>
     </div>
     <div class="grid-item">
         <section>
             <div>
-                <form (ngSubmit)="OnUpdate(matchData)">
+                <form (ngSubmit)="OnUpdate(match)">
                     <div class="form-group">
                         <label for="team1">Team 1:</label>
-                        <input id="team1" name="team1" [(ngModel)]="matchData.team1" class="form-control" required>
+                        <input id="team1" name="team1" [(ngModel)]="match.team1" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="team2">Team 2:</label>
-                        <input id="team2" name="team2" [(ngModel)]="matchData.team2" class="form-control" required>
+                        <input id="team2" name="team2" [(ngModel)]="match.team2" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="team1Score">Score team 1:</label>
-                        <input id="team1Score" name="team1Score" [(ngModel)]="matchData.team1Score" class="form-control" required>
+                        <input id="team1Score" name="team1Score" [(ngModel)]="match.team1Score" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="team2Score">Score team2:</label>
-                        <input id="team2Score" name="team2Score" [(ngModel)]="matchData.team2Score" class="form-control" required>
+                        <input id="team2Score" name="team2Score" [(ngModel)]="match.team2Score" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="date">Date: </label>
-                        <input id="date" name="date" [(ngModel)]="matchData.date" class="form-control" required>
+                        <input id="date" name="date" [(ngModel)]="match.date" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="time">Time: </label>
-                        <input id="time" name="time" [(ngModel)]="matchData.time" class="form-control" required>
+                        <input id="time" name="time" [(ngModel)]="match.time" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="location">Location: </label>
-                        <input id="location" name="location" [(ngModel)]="matchData.location" class="form-control" required>
+                        <input id="location" name="location" [(ngModel)]="match.location" class="form-control" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Update Match</button>
                 </form>
             </div>
-            <ov-form></ov-form>
         </section>
     </div>
     <div class="grid-item"></div>
