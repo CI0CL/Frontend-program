@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { TeamCreateModule } from './team-create/team-create.module';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -27,6 +28,9 @@ const routes: Routes = [
     loadChildren: () =>
     import('./player-create/player-create.module').then(m => m.PlayerCreateModule)
   },
+  {path:'team/create',
+    loadChildren: () =>
+    import('./team-create/team-create.module').then(m=>m.TeamCreateModule)},
 
   {path: 'players',
     loadChildren: () =>

@@ -54,5 +54,8 @@ export class TeamService {
     const searchUrl = `${this.apiUrl}/search?query=${query}`;
     return this.http.get<Team[]>(searchUrl);
   }
+  createTeam(teamData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, teamData);
+  }
 }
 

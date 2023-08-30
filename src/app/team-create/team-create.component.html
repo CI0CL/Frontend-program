@@ -1,0 +1,22 @@
+<div class="form">
+    <div class="createteam">
+    Create a Team:
+</div>
+<form (ngSubmit)="onSubmit(teamData)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="teamData.name" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" [(ngModel)]="teamData.city" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" [(ngModel)]="teamData.country" class="form-control" required>
+  </div>
+  <button type="submit">Create Team</button>
+</form>
+
+  
+</div>

@@ -1,0 +1,31 @@
+import { Component } from '@angular/core';
+import { Team } from 'src/app/shared/team';
+import { TeamService } from '../team-list/team/team.service';
+
+@Component({
+  selector: 'ov-team-create',
+  templateUrl: './team-create.component.html',
+  styleUrls: ['./team-create.component.scss']
+})
+export class TeamCreateComponent {
+  teamData: Partial <Team> = {};
+
+  constructor(private teamService: TeamService) {}
+
+  onSubmit(teamData: Partial<Team>){
+    const team: Team={
+      id: 0,
+      name: teamData.name || '',
+      country: teamData.country || '',
+      city: teamData.city || ''
+    };
+    this.teamService.createTeam(team).subscribe(
+      (response)=>{
+        console.log('team created successfully', response);
+      },
+      (error) => {
+        console.log('error creating team', error)
+      }
+    );
+  }
+}

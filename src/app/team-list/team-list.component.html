@@ -2,6 +2,13 @@
 <div class="search-bar">
   <ov-search-team (search)="onSearch($event)"></ov-search-team>
 </div>
+<li class = "nav-button">
+  <a routerLink="/team/create"
+   routerLinkActive="active"
+   [routerLinkActiveOptions]="{exact:true}">
+  Create Team
+</a>
+</li>
  <div class="team-list">
    <ul class="TeamList">
      <li *ngFor="let team of filteredTeamList">
