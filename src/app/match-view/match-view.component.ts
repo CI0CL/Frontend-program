@@ -18,8 +18,8 @@ import { TeamService } from '../team-list/team/team.service';
 export class MatchViewComponent implements OnDestroy {
 
   @Input() match: Match;
-  @Input() homeTeam: Team;
-  @Input() awayTeam: Team;
+  //@Input() homeTeam: Team;
+  //@Input() awayTeam: Team;
 
   private subscription: Subscription;
 
@@ -30,7 +30,7 @@ export class MatchViewComponent implements OnDestroy {
   ngOnInit() {
     this.loadEntity();
   }
-  
+
   loadEntity() {
     const id = this.route.snapshot.params['id'];
     this.matchService.getMatch(id)
@@ -69,12 +69,15 @@ export class MatchViewComponent implements OnDestroy {
     );
   }
 
-  onDelete() {
+  onDelete(){
     if (this.match) {
-      this.matchService.deleteMatch(this.match.id);
+      this.matchService.deleteMatch(this.match.id).subscribe(() => {
+        console.log('Button clicked!')
+      });
     }
-  }
 
+
+  }  
 
   ngOnDestroy(): void {
     if (this.subscription) {
