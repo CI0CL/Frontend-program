@@ -18,8 +18,10 @@ export class PlayerCreateComponent {
       name: playerData.name || '',
       age: playerData.age || 0,
       position: playerData.position || '',
-      number: playerData.number || 0
+      number: playerData.number || 0,
+      profilePictureUrl: playerData.profilePictureUrl || ''
     };
+    
     this.playerService.createPlayer(player).subscribe(
       (response) => {
         console.log('Player created successfully', response);
