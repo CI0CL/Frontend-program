@@ -12,3 +12,88 @@
     justify-content: center;
     align-items: center;
 }
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+.leftcolumn {   
+  float: left;
+  width: 60%;
+  padding-right:20px;
+  background-color: #f1f1f1;
+}
+.rightcolumn .fakeimg{
+    width:300px;
+    background-color: #aaa;
+}
+
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  margin-top:80px;
+}
+.logo img{
+    width: 300px;
+    height:100px;
+}
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width:788px;
+}
+.fakeimg img{
+    width:788px;
+    height:240px;
+
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom:70px;
+  font-size:larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card p {
+    font-size:medium;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
