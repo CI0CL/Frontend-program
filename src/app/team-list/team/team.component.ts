@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 export class TeamComponent implements OnInit {
   @Input() team: Team;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    
+
   }
 
-    viewTeam(teamId: number) {
-       this.router.navigate(['/team', teamId]);
-     }
-   }
+  viewTeam(teamId: number) {
+    this.router.navigate(['/team', teamId]);
+  }
+}

@@ -14,7 +14,7 @@ export class MatchComponent implements OnInit{
 
   ngOnInit(): void { }
 
-  viewPlayer(matchId: number) {
+  viewTeam(matchId: number) {
     this.router.navigate(['/match', matchId]);
   }
 }
