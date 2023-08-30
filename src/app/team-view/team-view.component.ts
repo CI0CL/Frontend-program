@@ -32,8 +32,8 @@ export class TeamViewComponent {
     });
   }
 
-  OnUpdate(team2: any) {
-    this.team = team2;
+  OnUpdate(awayTeam: any) {
+    this.team = awayTeam;
     this.teamService.updateTeam(this.team).subscribe(
       (response) => {
         return response;
