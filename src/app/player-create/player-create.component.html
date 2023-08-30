@@ -1,0 +1,26 @@
+<div class="form">
+    <div class="createplayer">
+    Create a player:
+</div>
+<form (ngSubmit)="onSubmit(playerData)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="playerData.name" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" [(ngModel)]="playerData.age" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="position">Position:</label>
+    <input type="text" id="position" name="position" [(ngModel)]="playerData.position" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="number">Number:</label>
+    <input type="text" id="number" name="number" [(ngModel)]="playerData.number" class="form-control" required>
+  </div>
+  <button type="submit">Create Player</button>
+</form>
+
+  
+</div>

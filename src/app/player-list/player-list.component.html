@@ -2,6 +2,13 @@
   <div class="search-bar">
     <ov-search (search)="onSearch($event)"></ov-search>
   </div>
+  <li class = "nav-button">
+    <a routerLink="/player/create"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}">
+    Create Player
+  </a>
+  </li>
   <div class="player-list">
     <ul class="playerlist">
       <li *ngFor="let player of filteredPlayerList">

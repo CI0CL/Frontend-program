@@ -23,6 +23,11 @@ const routes: Routes = [
     loadChildren: () =>
      import('./player-view/player-view.module').then(m => m.PlayerViewModule)
   },
+  {path:'player/create',
+    loadChildren: () =>
+    import('./player-create/player-create.module').then(m => m.PlayerCreateModule)
+  },
+
   {path: 'players',
     loadChildren: () =>
     import('./player-list-overview/player-list-overview.module').then(m=> m.PlayerlistOverviewModule)},

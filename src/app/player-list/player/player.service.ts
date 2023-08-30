@@ -41,20 +41,23 @@ export class PlayerService {
     return this.http.put<Player>(useUrl, dataToUpdate, {headers});
   }
 
-  createPlayer(player: Player): Observable<Player> {
+  // createPlayer(player: Player): Observable<Player> {
 
-    const useUrl: string = `${this.apiUrl}`;
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-    const dataToCreate = {
-      name: player.name,
-      age: player.age,
-      position: player.position,
-      number: player.number
-    };
+  //   const useUrl: string = `${this.apiUrl}`;
+  //   const headers = new HttpHeaders({
+  //     'Content-Type': 'application/json'
+  //   })
+  //   const dataToCreate = {
+  //     name: player.name,
+  //     age: player.age,
+  //     position: player.position,
+  //     number: player.number
+  //   };
     
-    return this.http.post<Player>(useUrl, dataToCreate, {headers});
+  //   return this.http.post<Player>(useUrl, dataToCreate, {headers});
+  // }
+  createPlayer(playerData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, playerData);
   }
 
   searchPlayer(query: string): Observable<Player[]> {
