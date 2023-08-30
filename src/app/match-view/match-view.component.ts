@@ -35,24 +35,28 @@ export class MatchViewComponent implements OnDestroy {
     const id = this.route.snapshot.params['id'];
     this.matchService.getMatch(id)
     .subscribe((match) => {
-      this.match = match;//
+      this.match = match;
     });
   }
 
-  async OnUpdate(newMatch : any){
-    this.match.date = newMatch.date
-    this.match.location = newMatch.location
-    this.match.homeTeamScore = newMatch.homeTeamScore
-    this.match.awayTeamScore = newMatch.awayTeamScore
+  async OnUpdate(updatedMatch : any){
+    this.match.date = updatedMatch.date
+    this.match.time = updatedMatch.time
+    this.match.location = updatedMatch.location
+    this.match.hometeamscore = updatedMatch.hometeamscore
+    this.match.awayteamscore = updatedMatch.awayteamscore
+    this.match.hometeam = updatedMatch.hometeam
+    this.match.awayteam = updatedMatch.awayteam
 
+    /*here follows the search by name of Team
     try {
-      const homeTeam: Team = await this.teamService.getTeamByName(newMatch.homeTeam);
-      const awayTeam: Team = await this.teamService.getTeamByName(newMatch.homeTeam);    
-      this.match.homeTeam =  homeTeam;
-      this.match.awayTeam = awayTeam;
+      const homeTeamEntity: Team = await this.teamService.getTeamByName(updatedMatch.hometeam);
+      const awayTeamEntity: Team = await this.teamService.getTeamByName(updatedMatch.awayteam);    
+      this.match.homeTeamEntity =  homeTeamEntity;
+      this.match.awayTeamEntity = awayTeamEntity;
     } catch (error) {
       // Handle errors here
-    }
+    } */
 
     this.matchService.updateMatch(this.match).subscribe(
       (response) => {

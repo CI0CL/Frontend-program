@@ -21,22 +21,21 @@ export class MatchService {
     return this.http.get<Match>(`${this.apiUrl}/${matchId}`);
   }
 
-  deleteMatch(matchId:any): Observable<Match>{
+  deleteMatch(matchId: number): Observable<Match>{
     return this.http.delete<Match>(`${this.apiUrl}/${matchId}`);
   }
 
   updateMatch(match : Match) {
-
     const useUrl: string = `${this.apiUrl}/${match.id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     })
 
     const dataToUpdate = {
-      homeTeam: match.homeTeam,
-      awayTeam: match.awayTeam,
-      homeTeamScore: match.homeTeamScore,
-      awayTeamScore: match.awayTeamScore,
+      hometeam: match.hometeam,
+      awayteam: match.awayteam,
+      hometeamscore: match.hometeamscore,
+      awayteamscore: match.awayteamscore,
       date: match.date,
       time: match.time,
       location: match.location
