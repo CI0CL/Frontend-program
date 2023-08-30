@@ -18,8 +18,8 @@ import { TeamService } from '../team-list/team/team.service';
 export class MatchViewComponent implements OnDestroy {
 
   @Input() match: Match;
-  //@Input() homeTeam: Team;
-  //@Input() awayTeam: Team;
+  @Input() homeTeam: Team;
+  @Input() awayTeam: Team;
 
   private subscription: Subscription;
 
@@ -39,7 +39,7 @@ export class MatchViewComponent implements OnDestroy {
     });
   }
 
-  async OnUpdate(updatedMatch : any){
+  async OnUpdate(updatedMatch : Match){
     this.match.date = updatedMatch.date
     this.match.time = updatedMatch.time
     this.match.location = updatedMatch.location
@@ -48,15 +48,14 @@ export class MatchViewComponent implements OnDestroy {
     this.match.hometeam = updatedMatch.hometeam
     this.match.awayteam = updatedMatch.awayteam
 
-    /*here follows the search by name of Team
     try {
       const homeTeamEntity: Team = await this.teamService.getTeamByName(updatedMatch.hometeam);
       const awayTeamEntity: Team = await this.teamService.getTeamByName(updatedMatch.awayteam);    
-      this.match.homeTeamEntity =  homeTeamEntity;
-      this.match.awayTeamEntity = awayTeamEntity;
+      this.homeTeam =  homeTeamEntity;
+      this.awayTeam = awayTeamEntity;
     } catch (error) {
       // Handle errors here
-    } */
+    } 
 
     this.matchService.updateMatch(this.match).subscribe(
       (response) => {
