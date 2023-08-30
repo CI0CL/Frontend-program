@@ -18,7 +18,7 @@ export class MatchesComponent implements OnInit {
     ngOnInit() {
       this.loadEntities();
         // Load all players initially
-       this.matchService.getMatches().subscribe((matches) => {
+      this.matchService.getMatches().subscribe((matches) => {
       this.matches = matches;
       // Initialize filteredPlayerList with all players
       this.filteredMatches = [...this.matches];
@@ -37,8 +37,8 @@ export class MatchesComponent implements OnInit {
         // Perform filtering based on the query
         this.filteredMatches = this.matches.filter((match) =>
           match.location.toLowerCase().includes(query.toLowerCase()) ||
-          match.team1.toLowerCase().includes(query.toLowerCase()) ||
-          match.team2.toLowerCase().includes(query.toLowerCase())
+          match.homeTeam.name.toLowerCase().includes(query.toLowerCase()) ||
+          match.awayTeam.name.toLowerCase().includes(query.toLowerCase())
         );
       } else {
         // If the query is empty, show all players

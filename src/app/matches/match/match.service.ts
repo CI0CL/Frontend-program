@@ -33,10 +33,10 @@ export class MatchService {
     })
 
     const dataToUpdate = {
-      team1: match.team1,
-      team2: match.team2,
-      team1Score: match.team1Score,
-      team2Score: match.team2Score,
+      homeTeam: match.homeTeam,
+      awayTeam: match.awayTeam,
+      homeTeamScore: match.homeTeamScore,
+      awayTeamScore: match.awayTeamScore,
       date: match.date,
       time: match.time,
       location: match.location
