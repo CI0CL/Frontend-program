@@ -67,7 +67,7 @@ export class MatchViewComponent implements OnDestroy {
 
   onDelete() {
     if (this.match) {
-      this.matchService.deleteMatch(this.match.matchId);
+      this.matchService.deleteMatch(this.match.id);
     }
   }
 

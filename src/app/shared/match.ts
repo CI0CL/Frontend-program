@@ -1,7 +1,7 @@
 import { Team } from "./team";
 
 export interface Match{
-    matchId: number;
+    id: number;
     team1: Team;
     team2: Team;
     team1Score: number;
