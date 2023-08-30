@@ -18,8 +18,8 @@ import { TeamService } from '../team-list/team/team.service';
 export class MatchViewComponent implements OnDestroy {
 
   @Input() match: Match;
-  @Input() team1: Team;
-  @Input() team2: Team;
+  @Input() homeTeam: Team;
+  @Input() awayTeam: Team;
 
   private subscription: Subscription;
 
@@ -42,14 +42,14 @@ export class MatchViewComponent implements OnDestroy {
   async OnUpdate(newMatch : any){
     this.match.date = newMatch.date
     this.match.location = newMatch.location
-    this.match.team1Score = newMatch.team1Score
-    this.match.team2Score = newMatch.team2Score
+    this.match.homeTeamScore = newMatch.homeTeamScore
+    this.match.awayTeamScore = newMatch.awayTeamScore
 
     try {
-      const team1: Team = await this.teamService.getTeamByName(newMatch.team1);
-      const team2: Team = await this.teamService.getTeamByName(newMatch.team1);    
-      this.match.team1 =  team1;
-      this.match.team2 = team2;
+      const homeTeam: Team = await this.teamService.getTeamByName(newMatch.homeTeam);
+      const awayTeam: Team = await this.teamService.getTeamByName(newMatch.homeTeam);    
+      this.match.homeTeam =  homeTeam;
+      this.match.awayTeam = awayTeam;
     } catch (error) {
       // Handle errors here
     }
