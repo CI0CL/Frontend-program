@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Team } from 'src/app/shared/team';
 import { TeamService } from '../team-list/team/team.service';
+import { HeaderTextService } from '../header-text.service';
 
 @Component({
   selector: 'ov-team-create',
@@ -10,7 +11,9 @@ import { TeamService } from '../team-list/team/team.service';
 export class TeamCreateComponent {
   teamData: Partial <Team> = {};
 
-  constructor(private teamService: TeamService) {}
+  constructor(private teamService: TeamService, private headerService: HeaderTextService) {
+    this.headerService.setHeaderText('Create team Page');
+  }
 
   onSubmit(teamData: Partial<Team>){
     const team: Team={
