@@ -42,7 +42,7 @@ export class MatchService {
       location: match.location
     };
 
-    return this.http.patch<Match>(useUrl,
+    return this.http.put<Match>(useUrl,
       dataToUpdate, {headers});
   }
   searchMatches(query: string): Observable<Match[]> {

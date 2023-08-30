@@ -38,7 +38,7 @@ export class PlayerService {
       number: player.number
     };
     
-    return this.http.patch<Player>(useUrl, dataToUpdate, {headers});
+    return this.http.put<Player>(useUrl, dataToUpdate, {headers});
   }
 
   createPlayer(player: Player): Observable<Player> {
