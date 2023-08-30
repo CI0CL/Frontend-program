@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PlayerService } from '../player-list/player/player.service';
 import { Player } from '../shared/player';
+import { HeaderTextService } from '../header-text.service';
 
 @Component({
   selector: 'ov-player-create',
@@ -10,7 +11,9 @@ import { Player } from '../shared/player';
 export class PlayerCreateComponent {
   playerData: Partial<Player> = {};
 
-  constructor(private playerService: PlayerService) {}
+  constructor(private playerService: PlayerService, private headerService: HeaderTextService) {
+    this.headerService.setHeaderText('Create player Page');
+  }
   
   onSubmit(playerData: Partial<Player>) {
     const player: Player = {

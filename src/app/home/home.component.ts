@@ -9,10 +9,12 @@ import { HeaderTextService } from '../header-text.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private headerService: HeaderTextService) { }
-
-  ngOnInit() {
+  constructor(private headerService: HeaderTextService) { 
     this.headerService.setHeaderText('Home Page');
+  }
+
+  ngOnInit(): void {
+
   }
 
 }
