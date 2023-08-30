@@ -36,8 +36,8 @@ export class MatchesComponent implements OnInit {
       // Perform filtering based on the query
       this.filteredMatches = this.matches.filter((match) =>
         match.location.toLowerCase().includes(query.toLowerCase()) ||
-        match.homeTeam.name.toLowerCase().includes(query.toLowerCase()) ||
-        match.awayTeam.name.toLowerCase().includes(query.toLowerCase())
+        match.hometeam.toLowerCase().includes(query.toLowerCase()) ||
+        match.awayteam.toLowerCase().includes(query.toLowerCase())
       );
     } else {
       // If the query is empty, show all players

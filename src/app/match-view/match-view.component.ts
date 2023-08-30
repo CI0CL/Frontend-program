@@ -43,14 +43,16 @@ export class MatchViewComponent implements OnDestroy {
     this.match.id = updatedMatch.id
     this.match.date = updatedMatch.date
     this.match.location = updatedMatch.location
-    this.match.homeTeamScore = updatedMatch.homeTeamScore
-    this.match.awayTeamScore = updatedMatch.awayTeamScore
+    this.match.hometeamscore = updatedMatch.homeTeamScore
+    this.match.awayteamscore = updatedMatch.awayTeamScore
+    this.match.hometeam = updatedMatch.homeTeam
+    this.match.awayteam = updatedMatch.awayTeam
 
     try {
-      const homeTeam: Team = await this.teamService.getTeamByName(updatedMatch.homeTeam);
-      const awayTeam: Team = await this.teamService.getTeamByName(updatedMatch.homeTeam);    
-      this.match.homeTeam =  homeTeam;
-      this.match.awayTeam = awayTeam;
+      const homeTeamEntity: Team = await this.teamService.getTeamByName(updatedMatch.homeTeam);
+      const awayTeamEntity: Team = await this.teamService.getTeamByName(updatedMatch.homeTeam);    
+      this.match.homeTeamEntity =  homeTeamEntity;
+      this.match.awayTeamEntity = awayTeamEntity;
     } catch (error) {
       // Handle errors here
     }
