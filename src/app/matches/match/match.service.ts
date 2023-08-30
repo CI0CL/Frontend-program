@@ -21,7 +21,7 @@ export class MatchService {
     return this.http.get<Match>(`${this.apiUrl}/${matchId}`);
   }
 
-  deleteMatch(matchId:any): Observable<Match>{
+  deleteMatch(matchId: any): Observable<Match>{
     return this.http.delete<Match>(`${this.apiUrl}/${matchId}`);
   }
 

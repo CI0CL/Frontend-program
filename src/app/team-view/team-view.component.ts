@@ -45,9 +45,10 @@ export class TeamViewComponent {
     );
   }
 
-  onDelete() {
+  onDelete() { // cannot delete or update a parent row?
     if (this.team) {
-      this.teamService.deleteTeam(this.team.id);
+      this.teamService.deleteTeam(this.team.id).subscribe(() => {// Handle successful deletion, e.g., navigate back to a list
+      })
     }
   }
 
