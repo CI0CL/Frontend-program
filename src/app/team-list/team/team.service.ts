@@ -43,11 +43,11 @@ export class TeamService {
       'Content-Type': 'application/json'
     })
     const dataToUpdate = {
-      teamName: team.name,
+      name: team.name,
       country: team.country,
       city: team.city
     };
-    return this.http.patch<Team>(useUrl,
+    return this.http.put<Team>(useUrl,
       dataToUpdate, { headers });
   }
   searchPlayer(query: string): Observable<Team[]> {
