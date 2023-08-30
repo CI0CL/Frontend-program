@@ -26,7 +26,6 @@ export class MatchService {
   }
 
   updateMatch(match : Match) {
-
     const useUrl: string = `${this.apiUrl}/${match.id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -35,8 +34,8 @@ export class MatchService {
     const dataToUpdate = {
       hometeam: match.hometeam,
       awayteam: match.awayteam,
-      hometeamScore: match.hometeamscore,
-      awayteamScore: match.awayteamscore,
+      hometeamscore: match.hometeamscore,
+      awayteamscore: match.awayteamscore,
       date: match.date,
       time: match.time,
       location: match.location
