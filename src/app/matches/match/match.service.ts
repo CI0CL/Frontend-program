@@ -27,7 +27,7 @@ export class MatchService {
 
   updateMatch(match : Match) {
 
-    const useUrl: string = `${this.apiUrl}/${match.matchId}`;
+    const useUrl: string = `${this.apiUrl}/${match.id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     })

@@ -18,12 +18,11 @@ export class MatchesComponent implements OnInit {
   ngOnInit() {
     this.loadEntities();
     // Load all players initially
-    this.matchService.getMatches().subscribe((matches) => {
+     this.matchService.getMatches().subscribe((matches) => {
       this.matches = matches;
-      // Initialize filteredPlayerList with all players
       this.filteredMatches = [...this.matches];
     });
-    this.loadEntities();
+    // this.loadEntities();
   }
 
   loadEntities() {

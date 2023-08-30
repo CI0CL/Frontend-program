@@ -12,11 +12,6 @@ export class PlayerListOverviewComponent implements OnInit {
   playerlist: Player[];
   player: Player;
 
-  // query: string;
-  // onSearch(query: string): void {
-  //   this.query = query;
-  // }
-
   constructor(private headerService: HeaderTextService, protected playerService: PlayerService) { }
 
   ngOnInit() {
