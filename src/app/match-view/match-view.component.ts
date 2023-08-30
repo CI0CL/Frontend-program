@@ -40,7 +40,7 @@ export class MatchViewComponent implements OnDestroy {
   }
 
   async OnUpdate(updatedMatch : any){
-    this.match.matchId = updatedMatch.id
+    this.match.id = updatedMatch.id
     this.match.date = updatedMatch.date
     this.match.location = updatedMatch.location
     this.match.homeTeamScore = updatedMatch.homeTeamScore
