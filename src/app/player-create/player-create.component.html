@@ -21,6 +21,11 @@
   </div>
   <button type="submit">Create Player</button>
 </form>
-
+<div *ngIf="isPlayerCreated" class="success-message">
+    {{successMessage}}
+</div>
+<div *ngIf="errorMessage" class="error-popup">
+  {{errorMessage}}
+</div>
   
 </div>

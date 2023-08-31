@@ -10,6 +10,9 @@ import { HeaderTextService } from '../header-text.service';
 })
 export class PlayerCreateComponent {
   playerData: Partial<Player> = {};
+  isPlayerCreated: boolean = false;
+  successMessage: string = '';
+  errorMessage: string | null = null;
 
   constructor(private playerService: PlayerService, private headerService: HeaderTextService) {
     this.headerService.setHeaderText('Create player Page');
@@ -28,9 +31,12 @@ export class PlayerCreateComponent {
     this.playerService.createPlayer(player).subscribe(
       (response) => {
         console.log('Player created successfully', response);
+        this.isPlayerCreated = true;
+        this.successMessage = 'Player created successfully';
       },
       (error) => {
         console.error('Error creating player', error);
+        this.errorMessage='Error creating player';
       }
     );
   }

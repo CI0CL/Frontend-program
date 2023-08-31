@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatchViewModule } from './match-view/match-view.module';
 import { PlayerViewModule } from './player-view/player-view.module';
 import { PlayerCreateModule } from './player-create/player-create.module';
+import { MatchCreateComponent } from './match-create/match-create.component';
 
 @NgModule({
   declarations: [

@@ -43,4 +43,13 @@
             <button type="submit" class="btn btn-primary">Update Team</button>
         </form>
     </div>
+    <div *ngIf="isTeamUpdated" class="success-message">
+        {{successMessage}}
+    </div>
+    <div *ngIf="isTeamDeleted" class="success-message">
+        {{successMessage}}
+    </div>
+    <div *ngIf="errorMessage" class="error-popup">
+        {{errorMessage}}
+    </div>
 </div>

@@ -51,6 +51,11 @@ const routes: Routes = [
     loadChildren: () =>
      import('./match-view/match-view.module').then(m => m.MatchViewModule)
   },
+  {
+    path: 'match/create',
+    loadChildren: () =>
+    import('./match-create/match-create.module').then(m=>m.MatchCreateModule)
+  },
   
   {path: '', redirectTo: '/Home-Component', pathMatch: 'full'}
 ];
