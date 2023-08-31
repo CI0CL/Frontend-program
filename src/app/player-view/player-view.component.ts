@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlayerViewComponent {
   @Input() player: Player;
+  imageSrc: string;
+  
 
 
   private subscription: Subscription;
@@ -30,6 +32,10 @@ export class PlayerViewComponent {
     .subscribe((player) => {
       this.player = player;
     });
+  }
+
+  getLink(image: string): string{
+    return this.imageSrc = "../../assets/player-images/" + image;
   }
 
   OnUpdate(player2: Player){
