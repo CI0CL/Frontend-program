@@ -13,7 +13,9 @@ import { TeamService } from '../team-list/team/team.service';
 })
 export class TeamViewComponent {
   @Input() team: Team;
-
+  isTeamUpdated: boolean = false;
+  successMessage: string = '';
+  isTeamDeleted: boolean = false;
   private subscription: Subscription;
 
   constructor(private headerService: HeaderTextService, private teamService: TeamService, private route: ActivatedRoute) {
@@ -36,7 +38,9 @@ export class TeamViewComponent {
     this.team = awayTeam;
     this.teamService.updateTeam(this.team).subscribe(
       (response) => {
-        return response;
+        console.log('team has been updated successfully', response);
+        this.isTeamUpdated = true;
+        this.successMessage = 'team has been updated successfully';
       },
       (error) => {
         return error;
@@ -47,8 +51,15 @@ export class TeamViewComponent {
 
   onDelete() { // cannot delete or update a parent row?
     if (this.team) {
-      this.teamService.deleteTeam(this.team.id).subscribe(() => {// Handle successful deletion, e.g., navigate back to a list
-      })
+      this.teamService.deleteTeam(this.team.id).subscribe(
+        (response) => {
+        console.log('team has been deleted', response);
+        this.isTeamDeleted = true;
+        this.successMessage = 'team has been deleted';
+      },
+      (error)=>{
+        console.log('there has been an error', error);
+      });
     }
   }
 

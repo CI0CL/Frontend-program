@@ -31,7 +31,7 @@ export class TeamCreateComponent {
         this.successMessage = 'Team created successfully';
       },
       (error) => {
-        console.log('error creating team', error)
+        console.log('error creating team', error);
       }
     );
   }

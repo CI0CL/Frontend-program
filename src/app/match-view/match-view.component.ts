@@ -20,6 +20,9 @@ export class MatchViewComponent implements OnDestroy {
   @Input() match: Match;
   @Input() homeTeam: Team;
   @Input() awayTeam: Team;
+  isMatchUpdated: boolean = false;
+  isMatchDeleted: boolean = false;
+  successMessage: string = '';
 
   private subscription: Subscription;
 
@@ -59,10 +62,12 @@ export class MatchViewComponent implements OnDestroy {
 
     this.matchService.updateMatch(this.match).subscribe(
       (response) => {
-        return response;
+        console.log('Match has been updated successfully', response);
+        this.isMatchUpdated = true;
+        this.successMessage= 'Match has been updated successfully';
       },
       (error) => {
-        return error;
+        console.log('Error updating match', error);
       }
       
     );
@@ -70,9 +75,16 @@ export class MatchViewComponent implements OnDestroy {
 
   onDelete(){
     if (this.match) {
-      this.matchService.deleteMatch(this.match.id).subscribe(() => {
-        console.log('Button clicked!')
-      });
+      this.matchService.deleteMatch(this.match.id).subscribe(
+        (response) => {
+          console.log('Match has been deleted successfully', response);
+          this.isMatchDeleted = true;
+          this.successMessage = 'Match has been cancelled';
+      },
+      (error) => {
+        console.log('error deleting match', error);
+      }
+      );
     }
 
 

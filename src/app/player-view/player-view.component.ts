@@ -12,6 +12,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlayerViewComponent {
   @Input() player: Player;
+  isPlayerUpdated: boolean = false;
+  isPlayerDeleted: boolean = false;
+  successMessage: string = '';
 
 
   private subscription: Subscription;
@@ -36,10 +39,12 @@ export class PlayerViewComponent {
     this.player = player2;
     this.playerService.updatePlayer(this.player).subscribe(
       (response) => {
-        return response;
+        console.log('player has been updated successfully', response);
+        this.isPlayerUpdated = true;
+        this.successMessage = 'Player has been updated successfully';
       },
       (error) => {
-        return error;
+        console.log('error during player update', error);
       }
       
     );  
@@ -47,9 +52,16 @@ export class PlayerViewComponent {
 
   onDelete(){
     if (this.player) {
-      this.playerService.deletePlayer(this.player.id).subscribe(() => {
-        // Handle successful deletion, e.g., navigate back to a list
-      });
+      this.playerService.deletePlayer(this.player.id).subscribe(
+        (response) => {
+          console.log('player has been deleted successfully', response);
+          this.isPlayerDeleted = true;
+          this.successMessage = 'Player has been deleted';
+        },
+        (error)=> {
+          console.log('error deleting player',error);
+        }
+        );
     }
 
 

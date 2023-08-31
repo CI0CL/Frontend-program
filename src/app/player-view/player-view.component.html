@@ -54,43 +54,10 @@
             </form>
         </div>
         </div>
-</div>
-<!--
-
-
-<div class="player-container">
-    <div class="grid-item">
-        <div class = "player-picture"><img src="../../assets/player-picture-placeholder.jpg" alt="Player picture"></div>
-        <section class = "text">
-            <p><strong>id:</strong> {{ player.id}}</p>
-            <p><strong>Name:</strong> {{ player.name }}</p>
-            <p><strong>Age:</strong> {{ player.position }}</p>
-        </section>        
-        <div class="button">
-            <a routerLink="/home"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact:true}" >
-            Delete</a>
+        <div *ngIf="isPlayerUpdated" class="success-message">
+            {{successMessage}}
         </div>
-        
-    </div>
-    <div class="grid-item">
-        <section class = "text">
-            <p>Here we would put a short description, and fun facts</p>
-            <p>Or perhaps red/yellow cards, goals, etc.</p>
-        </section>
-    </div>
-    <div class="grid-item">
-        <ol>
-            <li class="button">
-                <a routerLink="/home"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact:true}" >
-                Update</a>
-            </li>
-        </ol>
-    </div>
-
+        <div *ngIf="isPlayerDeleted" class="success-message">
+            {{successMessage}}
+        </div>
 </div>
-
--->

@@ -63,4 +63,10 @@
         </section>
     </div>
     <div class="grid-item"></div>
+    <div *ngIf="isMatchUpdated" class="success-message">
+        {{successMessage}}
+    </div>
+    <div *ngIf="isMatchDeleted" class="success-message">
+        {{successMessage}}
+    </div>
 </div>
