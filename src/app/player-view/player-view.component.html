@@ -1,16 +1,16 @@
 <div class="player-container">
     <div class="grid-item">
-        <!--<ov-square-image [imageSrc]="player.profilePictureUrl"></ov-square-image>-->
-        <ov-square-image [imageSrc]="getLink(player.profilePictureUrl)"></ov-square-image>
-        </div>
+        <div class="player-picture"><img src="../../assets/player-picture-placeholder.jpg" alt="Player picture"></div>
+    </div>
 
     <div *ngIf="player">
-        <h2>Player Details</h2>       
+        <h2>Player Details</h2>
         <p><strong>id:</strong> {{ player.id }}</p>
         <p><strong>Name:</strong> {{ player.name }}</p>
         <p><strong>Age:</strong> {{ player.age }}</p>
         <p><strong>Position:</strong> {{ player.position }}</p>
         <p><strong>Number:</strong> {{ player.number }}</p>
+
         
         <!-- Add more player details as needed -->
       </div>
@@ -33,6 +33,7 @@
     <div class="grid-item">
         <div>
             <form (ngSubmit)="OnUpdate(player)">
+                <p>Player Id: {{player.id}}</p>
                 <div class="form-group">
                 <label for="name">Name:</label>
                   <input id="name" name="name" [(ngModel)]="player.name" class="form-control" required>

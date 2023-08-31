@@ -25,7 +25,6 @@ export class PlayerCreateComponent {
       age: playerData.age || 0,
       position: playerData.position || '',
       number: playerData.number || 0,
-      profilePictureUrl: playerData.profilePictureUrl || ''
     };
     
     this.playerService.createPlayer(player).subscribe(
