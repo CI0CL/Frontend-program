@@ -2,6 +2,13 @@
   <div class="search-bar">
     <ov-search (search)="onSearch($event)"></ov-search>
   </div>
+  <li class = "nav-button">
+    <a routerLink="/match/create"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}">
+    Create Match
+  </a>
+  </li>
  <div class="matches">
    <ul class="match">
      <li *ngFor="let match of filteredMatches">

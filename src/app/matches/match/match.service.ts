@@ -48,4 +48,7 @@ export class MatchService {
     const searchUrl = `${this.apiUrl}/search?query=${query}`;
     return this.http.get<Match[]>(searchUrl);
   }
+  createMatch(matchData: any): Observable<any>{
+    return this.http.post(`${this.apiUrl}`, matchData)
+  }
 }
