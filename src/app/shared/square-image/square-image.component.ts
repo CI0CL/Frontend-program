@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { SquareImageService } from './square-image.service';
 
 @Component({
@@ -9,7 +9,11 @@ import { SquareImageService } from './square-image.service';
 export class SquareImageComponent implements OnInit {
   @Input() imageSrc: any;
   @Input() alt: any = "No picture available!"
-  
-  ngOnInit(): void {}
+
+  constructor(){}
+
+  ngOnInit(): void {
+    
+  }
 
 }

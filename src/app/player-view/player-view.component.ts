@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlayerViewComponent {
   @Input() player: Player;
+  imageSrc: string;
   isPlayerUpdated: boolean = false;
   isPlayerDeleted: boolean = false;
   successMessage: string = '';
@@ -34,6 +35,10 @@ export class PlayerViewComponent {
     .subscribe((player) => {
       this.player = player;
     });
+  }
+
+  getLink(image: string): string{
+    return this.imageSrc = "../../assets/player-images/" + image;
   }
 
   OnUpdate(player2: Player){

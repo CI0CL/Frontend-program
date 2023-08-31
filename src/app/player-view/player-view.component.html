@@ -1,6 +1,7 @@
 <div class="player-container">
     <div class="grid-item">
-        <ov-square-image [imageSrc]="player.profilePictureUrl"></ov-square-image>
+        <!--<ov-square-image [imageSrc]="player.profilePictureUrl"></ov-square-image>-->
+        <ov-square-image [imageSrc]="getLink(player.profilePictureUrl)"></ov-square-image>
         </div>
 
     <div *ngIf="player">
