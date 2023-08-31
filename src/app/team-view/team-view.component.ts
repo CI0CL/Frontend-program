@@ -16,6 +16,8 @@ export class TeamViewComponent {
   isTeamUpdated: boolean = false;
   successMessage: string = '';
   isTeamDeleted: boolean = false;
+  errorMessage: string | null = null;
+
   private subscription: Subscription;
 
   constructor(private headerService: HeaderTextService, private teamService: TeamService, private route: ActivatedRoute) {
@@ -43,7 +45,8 @@ export class TeamViewComponent {
         this.successMessage = 'team has been updated successfully';
       },
       (error) => {
-        return error;
+        console.log('Error updating team', error);
+        this.errorMessage='Error updating team';
       }
 
     );
@@ -59,6 +62,7 @@ export class TeamViewComponent {
       },
       (error)=>{
         console.log('there has been an error', error);
+        this.errorMessage='Error deleting team'
       });
     }
   }

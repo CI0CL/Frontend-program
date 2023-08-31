@@ -12,6 +12,7 @@ export class MatchCreateComponent {
   matchData: Partial<Match> = {};
   isMatchCreated: boolean = false;
   successMessage: string = '';
+  errorMessage: string | null = null;
 
   constructor(private matchService: MatchService, private headerService: HeaderTextService) {
     this.headerService.setHeaderText('Create match Page');
@@ -36,7 +37,8 @@ export class MatchCreateComponent {
       },
       (error) => {
         console.error('Error creating player', error);
-        
+        this.errorMessage='Error creating player';
+
       }
     );
   }

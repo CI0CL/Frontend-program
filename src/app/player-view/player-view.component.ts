@@ -15,6 +15,7 @@ export class PlayerViewComponent {
   isPlayerUpdated: boolean = false;
   isPlayerDeleted: boolean = false;
   successMessage: string = '';
+  errorMessage: string | null = null;
 
 
   private subscription: Subscription;
@@ -45,6 +46,7 @@ export class PlayerViewComponent {
       },
       (error) => {
         console.log('error during player update', error);
+        this.errorMessage = 'Error updating player';
       }
       
     );  
@@ -60,6 +62,7 @@ export class PlayerViewComponent {
         },
         (error)=> {
           console.log('error deleting player',error);
+          this.errorMessage = 'Error deleting player';
         }
         );
     }

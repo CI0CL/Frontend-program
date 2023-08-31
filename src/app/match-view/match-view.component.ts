@@ -23,6 +23,7 @@ export class MatchViewComponent implements OnDestroy {
   isMatchUpdated: boolean = false;
   isMatchDeleted: boolean = false;
   successMessage: string = '';
+  errorMessage: string | null = null;
 
   private subscription: Subscription;
 
@@ -68,6 +69,7 @@ export class MatchViewComponent implements OnDestroy {
       },
       (error) => {
         console.log('Error updating match', error);
+        this.errorMessage = 'Error updating match';
       }
       
     );
@@ -83,6 +85,7 @@ export class MatchViewComponent implements OnDestroy {
       },
       (error) => {
         console.log('error deleting match', error);
+        this.errorMessage= 'error cancelling match';
       }
       );
     }

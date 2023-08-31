@@ -12,6 +12,7 @@ export class PlayerCreateComponent {
   playerData: Partial<Player> = {};
   isPlayerCreated: boolean = false;
   successMessage: string = '';
+  errorMessage: string | null = null;
 
   constructor(private playerService: PlayerService, private headerService: HeaderTextService) {
     this.headerService.setHeaderText('Create player Page');
@@ -33,6 +34,7 @@ export class PlayerCreateComponent {
       },
       (error) => {
         console.error('Error creating player', error);
+        this.errorMessage='Error creating player';
       }
     );
   }
