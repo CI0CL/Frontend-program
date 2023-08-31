@@ -33,6 +33,8 @@
   </div>
   <button type="submit">Create Match</button>
 </form>
-
+<div *ngIf="isMatchCreated" class="success-message">
+    {{ successMessage }}
+  </div>
   
 </div>

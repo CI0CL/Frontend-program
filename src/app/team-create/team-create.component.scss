@@ -44,4 +44,16 @@
   button[type="submit"]:hover {
     background-color: #0056b3;
   }
+  .success-message {
+    background-color: #4caf50; /* Green background color */
+    color: white; /* White text color */
+    padding: 16px; /* Padding */
+    text-align: center; /* Center text */
+    position: fixed; /* Fixed position at the bottom of the page */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Set a higher z-index to ensure it's on top of other content */
+  }
+  
   

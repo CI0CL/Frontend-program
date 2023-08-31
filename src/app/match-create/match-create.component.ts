@@ -10,6 +10,8 @@ import { HeaderTextService } from '../header-text.service';
 })
 export class MatchCreateComponent {
   matchData: Partial<Match> = {};
+  isMatchCreated: boolean = false;
+  successMessage: string = '';
 
   constructor(private matchService: MatchService, private headerService: HeaderTextService) {
     this.headerService.setHeaderText('Create match Page');
@@ -29,9 +31,12 @@ export class MatchCreateComponent {
     this.matchService.createMatch(match).subscribe(
       (response) => {
         console.log('Player created successfully', response);
+        this.isMatchCreated = true;
+        this.successMessage = 'Match created successfully';
       },
       (error) => {
         console.error('Error creating player', error);
+        
       }
     );
   }

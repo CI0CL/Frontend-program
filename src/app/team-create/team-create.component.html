@@ -17,6 +17,8 @@
   </div>
   <button type="submit">Create Team</button>
 </form>
-
+<div *ngIf="isTeamCreated" class="success-message">
+  {{successMessage}}
+</div>
   
 </div>
